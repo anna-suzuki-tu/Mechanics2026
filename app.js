@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainVideoSection = document.getElementById("main-video-section");
     if (quizSection) quizSection.classList.add("hidden");
     if (mainVideoSection) mainVideoSection.classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
     return;
   }
 
@@ -138,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
       quizSection.classList.add("hidden");
       supplementarySection.classList.add("hidden");
       mainVideoSection.classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
 
