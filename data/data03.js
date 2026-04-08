@@ -15,7 +15,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 3-1: What Belongs on a Free Body Diagram",
     supplementaryText:
       "You included ma on the FBD. ma is the result of the forces, not a force itself. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/3-1.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_3-1.mp4"
   },
   {
     id: "3-2",
@@ -31,7 +31,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 3-2: Strategic Axis Alignment for Inclined Planes",
     supplementaryText:
       "You missed the benefit of aligning axes with the motion. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/3-2.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_3-2.mp4"
   },
   {
     id: "3-3",
@@ -47,7 +47,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 3-3: Static Friction Is Not Always at Its Maximum",
     supplementaryText:
       "You confused maximum static friction with actual static friction. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/3-3.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_3-3.mp4"
   },
   {
     id: "3-4",
@@ -63,7 +63,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 3-4: Newton's Second Law in Circular Motion — the Normal Force",
     supplementaryText:
       "You missed the direction of the net centripetal force at the top of a hill. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/3-4.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_3-4.mp4"
   },
   {
     id: "3-5",
@@ -79,6 +79,6 @@ const questions = [
     supplementaryTitle: "Supplementary Video 3-5: Newton's Third Law — Action and Reaction Pairs",
     supplementaryText:
       "You missed the equal-and-opposite nature of Newton's third law. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/3-5.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_3-5.mp4"
   }
 ];

@@ -15,7 +15,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 2-1: Intuition of Normal and Tangential Acceleration",
     supplementaryText:
       "You missed the concept of centripetal (normal) acceleration. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/2-1.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_2-1.mp4"
   },
   {
     id: "2-2",
@@ -31,7 +31,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 2-2: Projectile Motion — The Power of Independence",
     supplementaryText:
       "You cannot yet apply independent component analysis for projectile motion. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/2-2.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_2-2.mp4"
   },
   {
     id: "2-3",
@@ -47,7 +47,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 2-3: Translating Reference Frames and Relative Motion",
     supplementaryText:
       "You missed the vector relationship for relative motion. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/2-3.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_2-3.mp4"
   },
   {
     id: "2-4",
@@ -63,7 +63,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 2-4: Deceleration vs. Directional Change",
     supplementaryText:
       "You are confusing tangential acceleration with change in direction. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/2-4.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_2-4.mp4"
   },
   {
     id: "2-5",
@@ -79,6 +79,6 @@ const questions = [
     supplementaryTitle: "Supplementary Video 2-5: Geometry of Motion — Curvature and Its Effects",
     supplementaryText:
       "You missed that a_n = v²/ρ, so a smaller ρ makes a_n larger. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/2-5.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_2-5.mp4"
   }
 ];

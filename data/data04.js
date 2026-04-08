@@ -15,7 +15,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 4-1: Conservative Forces and Path Independence",
     supplementaryText:
       "You missed the path-independence property of conservative forces. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/4-1.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_4-1.mp4"
   },
   {
     id: "4-2",
@@ -31,7 +31,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 4-2: When Energy Conservation Fails — Non-Conservative Forces",
     supplementaryText:
       "You missed that friction removes mechanical energy from the system. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/4-2.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_4-2.mp4"
   },
   {
     id: "4-3",
@@ -47,7 +47,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 4-3: The F-t Graph and the Impulse-Momentum Theorem",
     supplementaryText:
       "You confused the F-t graph with the F-d graph. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/4-3.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_4-3.mp4"
   },
   {
     id: "4-4",
@@ -63,7 +63,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 4-4: Elastic vs. Inelastic Collisions — What Is Conserved?",
     supplementaryText:
       "You confused what is conserved in an inelastic collision. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/4-4.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_4-4.mp4"
   },
   {
     id: "4-5",
@@ -79,6 +79,6 @@ const questions = [
     supplementaryTitle: "Supplementary Video 4-5: Power — Force Times Velocity",
     supplementaryText:
       "You confused power (rate of doing work) with total work. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/4-5.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_4-5.mp4"
   }
 ];

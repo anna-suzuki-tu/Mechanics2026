@@ -15,7 +15,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 5-1: Internal Forces Always Cancel",
     supplementaryText:
       "You missed that every internal force has an equal and opposite reaction partner. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/5-1.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_5-1.mp4"
   },
   {
     id: "5-2",
@@ -31,7 +31,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 5-2: The Mass Center Cannot Be Moved by Internal Forces",
     supplementaryText:
       "You missed that internal forces cannot change the trajectory of the mass center. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/5-2.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_5-2.mp4"
   },
   {
     id: "5-3",
@@ -47,7 +47,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 5-3: Condition for Linear Momentum Conservation",
     supplementaryText:
       "You missed the external force condition for momentum conservation. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/5-3.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_5-3.mp4"
   },
   {
     id: "5-4",
@@ -63,7 +63,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 5-4: Decomposing Kinetic Energy — CM and Relative Terms",
     supplementaryText:
       "You missed that total KE splits into a mass-center term and a relative-motion term. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/5-4.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_5-4.mp4"
   },
   {
     id: "5-5",
@@ -79,6 +79,6 @@ const questions = [
     supplementaryTitle: "Supplementary Video 5-5: Motion of the Mass Center with No External Force",
     supplementaryText:
       "You missed Newton's first law applied to the mass center. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/5-5.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_5-5.mp4"
   }
 ];

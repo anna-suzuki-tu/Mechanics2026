@@ -15,7 +15,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 6-1: Pure Translation — All Points Share the Same Velocity",
     supplementaryText:
       "You confused translation with rotation. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/6-1.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_6-1.mp4"
   },
   {
     id: "6-2",
@@ -31,7 +31,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 6-2: General Plane Motion = Translation + Rotation",
     supplementaryText:
       "You missed the decomposition of general plane motion. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/6-2.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_6-2.mp4"
   },
   {
     id: "6-3",
@@ -47,7 +47,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 6-3: The Instantaneous Center of Rotation — Definition and Use",
     supplementaryText:
       "You missed the key property of the ICR. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/6-3.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_6-3.mp4"
   },
   {
     id: "6-4",
@@ -63,7 +63,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 6-4: Relative Velocity Is Always Perpendicular to the Link",
     supplementaryText:
       "You missed the geometric constraint that v_B/A ⊥ AB for a rigid body. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/6-4.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_6-4.mp4"
   },
   {
     id: "6-5",
@@ -79,6 +79,6 @@ const questions = [
     supplementaryTitle: "Supplementary Video 6-5: Speed Distribution Around the ICR",
     supplementaryText:
       "You missed that speed is proportional to distance from the ICR. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/6-5.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_6-5.mp4"
   }
 ];
