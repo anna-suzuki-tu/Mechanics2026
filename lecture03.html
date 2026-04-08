@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 3: Newton's Laws & Free Body Diagrams</title>
+  <link rel="stylesheet" href="style_v2.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 3: Newton's Laws & Free Body Diagrams | Chapter 12</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          Review where we're coming from and what you'll be able to do by the end of this lecture.
+          When you're ready, click <strong>Start Gatekeeper</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Lecture 2 — Curvilinear Motion & Relative Motion</div>
+            <p class="block-body">You learned T–N coordinates: a_t = dv/dt for speed change, a_n = v²/ρ for direction change. Projectile motion was solved by treating x and y independently. Relative velocity was handled by vector subtraction v_B/A = v_B − v_A.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Learning Goals for This Lecture</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Draw correct Free Body Diagrams (FBD)</strong>
+                <span class="goal-detail">An FBD contains only <mark>real forces</mark> acting on the body — weight, normal force, friction, tension. Never include ma (the result) as a force on the diagram. This is the most common conceptual error.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Choose a coordinate system aligned with the motion</strong>
+                <span class="goal-detail">For inclined planes, align one axis along the slope. For circular motion, use <mark>normal-tangential coordinates</mark>. The right axis choice reduces the number of equation terms by half.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Apply Newton's second law systematically in each direction</strong>
+                <span class="goal-detail">Write <mark>ΣF = ma</mark> for each independent direction. For curved paths, the normal equation gives ΣF_n = mv²/ρ. Always resolve all forces into the chosen coordinate system before writing equations.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header caution">Caution ⚠</div>
+          <div class="card-body">
+            <p class="caution-body">Never put ma on the FBD — it is the net effect of forces, not a force itself. Static friction is <strong>not always μ_s·N</strong>; it takes only the value needed for equilibrium, up to that maximum. Always check whether the object is moving before choosing kinetic vs. static friction.</p>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-quiz-btn" class="btn primary">Start Gatekeeper →</button>
+        </div>
+      </section>
+
+      <!-- ② Quiz (content loaded by app.js) -->
+      <section id="quiz-section" class="card hidden">
+        <div class="progress-wrap"><span id="progress-text">Question 1 / 5</span></div>
+        <h2 id="question-title">Question</h2>
+        <p id="question-text"></p>
+        <div id="choices-container" class="choices"></div>
+        <div class="button-row">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn-correct" class="btn secondary hidden">Next</button>
+        </div>
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <!-- ③ Supplementary Video -->
+      <section id="supplementary-section" class="card hidden">
+        <div class="card-header">Quick Fix</div>
+        <div class="card-body">
+          <p id="supplementary-message"></p>
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <video id="supp-video" controls preload="metadata" class="supp-video">
+              <source id="supp-video-source" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div id="supp-next-row" class="hidden" style="justify-content:center; margin-top:16px;">
+            <button id="next-btn-wrong" class="btn secondary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Main Video + Exercises -->
+      <section id="main-video-section" class="hidden">
+        <div class="card">
+          <div class="card-header">Main Lecture Video</div>
+          <div class="card-body">
+            <div class="lecture-instructions">
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+            </div>
+            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
+              <source src="videos/main/lecture3_main_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">FBD on a Frictionless Surface</div>
+              <div class="ex-body">A 5 kg block sits on a frictionless horizontal surface. A horizontal force F = 20 N is applied to the right. Draw the complete FBD: identify every force, its direction, and its source. Then find the acceleration.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">FBD with Kinetic Friction</div>
+              <div class="ex-body">A 10 kg block on a horizontal surface (μ_k = 0.3) is pulled by a horizontal force F = 40 N. The block is moving. Draw the FBD, write ΣF = ma in the x-direction, and find the acceleration.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Standard Problems — Core</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Standard 1</div>
+              <div class="ex-title">Block on an Incline with Friction</div>
+              <div class="ex-body">A 20 kg block slides down a 30° incline with μ_k = 0.2. Find the acceleration. <em>Hint: align one axis parallel to the incline, one perpendicular. Write ΣF = ma along each axis separately.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 2</div>
+              <div class="ex-title">Atwood Machine</div>
+              <div class="ex-body">Two masses m₁ = 5 kg and m₂ = 8 kg are connected by a rope over a massless frictionless pulley. Find the acceleration of the system and the tension in the rope. <em>Hint: draw separate FBDs for each mass; they share the same |a| and T.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 3</div>
+              <div class="ex-title">Circular Motion — String Tension</div>
+              <div class="ex-body">A 2 kg ball on a 1.5 m string moves in a horizontal circle at constant speed v = 4 m/s. Find the tension in the string. <em>Hint: ΣF_n = mv²/ρ directed toward the center.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Coupled Blocks — No-Slip Condition</div>
+              <div class="ex-body">Block A (3 kg) sits on top of block B (7 kg). A horizontal force F is applied to block B. The contact surface between A and B has μ_s = 0.4; the floor below B is frictionless. Find the maximum force F such that A and B move together without A slipping on B. What happens if F exceeds this value?</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data03.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 11: Analytical Mechanics I: Why Lagrangian?</title>
+  <link rel="stylesheet" href="style_v2.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 11: Analytical Mechanics I: Why Lagrangian? | Intro to Analytical Mechanics</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          Review where we're coming from and what you'll be able to do by the end of this lecture.
+          When you're ready, click <strong>Start Gatekeeper</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Lecture 10 — Vibration of Particles</div>
+            <p class="block-body">You derived the SHM equation mẍ + kx = 0, found the natural frequency ω_n = √(k/m), and wrote the full response from initial conditions. You saw how energy oscillates between kinetic and potential, and why resonance is dangerous when the forcing frequency matches ω_n.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Learning Goals for This Lecture</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Identify the limitations of Newton's method that motivate analytical mechanics</strong>
+                <span class="goal-detail">Newton's method requires identifying and resolving all <mark>constraint forces</mark> (normal forces, tensions) as explicit vectors. For systems with many degrees of freedom or complex constraints, this becomes unmanageable. Analytical mechanics replaces force vectors with scalar energy quantities.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Define generalized coordinates and the Lagrangian L = T − V</strong>
+                <span class="goal-detail">A generalized coordinate q is any independent variable that fully describes the system configuration. The <mark>Lagrangian L = T − V</mark> is the difference between kinetic and potential energy. Its form is the same regardless of which coordinates you choose.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Experience the computational advantage on a simple system</strong>
+                <span class="goal-detail">For a spring-mass system: write T = ½mẋ², V = ½kx², L = T − V. The <mark>equation of motion falls out in three lines</mark> — without drawing a single force diagram. Compare directly with Newton's method on the same problem.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header caution">Caution ⚠</div>
+          <div class="card-body">
+            <p class="caution-body">The Lagrangian <mark>L = T − V</mark> is <strong>NOT</strong> the total energy (which is T + V). The sign difference is essential — using T + V gives the wrong equations of motion. A generalized coordinate must be independent; if constraints link your chosen variables, you have too many coordinates.</p>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-quiz-btn" class="btn primary">Start Gatekeeper →</button>
+        </div>
+      </section>
+
+      <!-- ② Quiz (content loaded by app.js) -->
+      <section id="quiz-section" class="card hidden">
+        <div class="progress-wrap"><span id="progress-text">Question 1 / 5</span></div>
+        <h2 id="question-title">Question</h2>
+        <p id="question-text"></p>
+        <div id="choices-container" class="choices"></div>
+        <div class="button-row">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn-correct" class="btn secondary hidden">Next</button>
+        </div>
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <!-- ③ Supplementary Video -->
+      <section id="supplementary-section" class="card hidden">
+        <div class="card-header">Quick Fix</div>
+        <div class="card-body">
+          <p id="supplementary-message"></p>
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <video id="supp-video" controls preload="metadata" class="supp-video">
+              <source id="supp-video-source" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div id="supp-next-row" class="hidden" style="justify-content:center; margin-top:16px;">
+            <button id="next-btn-wrong" class="btn secondary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Main Video + Exercises -->
+      <section id="main-video-section" class="hidden">
+        <div class="card">
+          <div class="card-header">Main Lecture Video</div>
+          <div class="card-body">
+            <div class="lecture-instructions">
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+            </div>
+            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
+              <source src="videos/main/lecture11_main.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data11.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

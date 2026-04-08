@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 10: Vibration of Particles</title>
+  <link rel="stylesheet" href="style_v2.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 10: Vibration of Particles | Chapter 19</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          Review where we're coming from and what you'll be able to do by the end of this lecture.
+          When you're ready, click <strong>Start Gatekeeper</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Lectures 6–8 — Rigid Body Mechanics (+ Midterm)</div>
+            <p class="block-body">Lectures 6–8 completed rigid body mechanics: kinematics, Newton's equations, and energy/momentum methods for rotating systems. The midterm covered Chapters 11–17. This lecture begins the third and final part of the course: vibration and analytical mechanics.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Learning Goals for This Lecture</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Derive the equation of motion and find the natural frequency</strong>
+                <span class="goal-detail">Apply Newton's second law to get <mark>mẍ + kx = 0</mark>. The natural frequency is <mark>ω_n = √(k/m)</mark> rad/s. This depends only on system properties — not on initial conditions or how hard the system is excited.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Write and interpret the full response x(t) from initial conditions</strong>
+                <span class="goal-detail">General solution: <mark>x(t) = C₁cos(ω_n t) + C₂sin(ω_n t)</mark>. Apply x(0) = x₀ → C₁ = x₀; ẋ(0) = v₀ → C₂ = v₀/ω_n. Amplitude A = √(C₁² + C₂²). Period T = 2π/ω_n.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Understand energy exchange in SHM and the concept of resonance</strong>
+                <span class="goal-detail">At equilibrium: <mark>KE is maximum, PE = 0</mark>. At the extremes: KE = 0, PE is maximum. Total energy E = ½kA² = constant. Resonance occurs when the forcing frequency matches ω_n — amplitude grows without bound in the undamped case.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header caution">Caution ⚠</div>
+          <div class="card-body">
+            <p class="caution-body">At the extreme positions (x = ±A), velocity is zero but <strong>acceleration is maximum</strong>: a = −ω_n²A. Never confuse v = 0 with a = 0. The natural frequency ω_n does <strong>not</strong> change with amplitude — it is a property of the system, not the motion.</p>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-quiz-btn" class="btn primary">Start Gatekeeper →</button>
+        </div>
+      </section>
+
+      <!-- ② Quiz (content loaded by app.js) -->
+      <section id="quiz-section" class="card hidden">
+        <div class="progress-wrap"><span id="progress-text">Question 1 / 5</span></div>
+        <h2 id="question-title">Question</h2>
+        <p id="question-text"></p>
+        <div id="choices-container" class="choices"></div>
+        <div class="button-row">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn-correct" class="btn secondary hidden">Next</button>
+        </div>
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <!-- ③ Supplementary Video -->
+      <section id="supplementary-section" class="card hidden">
+        <div class="card-header">Quick Fix</div>
+        <div class="card-body">
+          <p id="supplementary-message"></p>
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <video id="supp-video" controls preload="metadata" class="supp-video">
+              <source id="supp-video-source" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div id="supp-next-row" class="hidden" style="justify-content:center; margin-top:16px;">
+            <button id="next-btn-wrong" class="btn secondary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Main Video + Exercises -->
+      <section id="main-video-section" class="hidden">
+        <div class="card">
+          <div class="card-header">Main Lecture Video</div>
+          <div class="card-body">
+            <div class="lecture-instructions">
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+            </div>
+            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
+              <source src="videos/main/lecture10_main.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data10.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

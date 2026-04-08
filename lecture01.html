@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 1: Rebuilding Kinematics</title>
+  <link rel="stylesheet" href="style_v2.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 1: Rebuilding Kinematics | Chapter 11</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          Review where we're coming from and what you'll be able to do by the end of this lecture.
+          When you're ready, click <strong>Start Gatekeeper</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Course Overview</div>
+            <p class="block-body">Welcome to Mechanics 2026. This is the first lecture — no prior lecture content is required beyond high school physics. This course will take you from particle kinematics through rigid body dynamics to the foundations of analytical mechanics.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Learning Goals for This Lecture</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Master the calculus chain of motion</strong>
+                <span class="goal-detail">Differentiate position to get velocity; differentiate velocity to get acceleration. Integrate in reverse. You can <mark>derive every kinematic formula</mark> from first principles — no memorization needed.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Classify acceleration type before calculating</strong>
+                <span class="goal-detail">Identify whether acceleration is constant, a function of time <mark>a(t)</mark>, or a function of position <mark>a(x)</mark>. Each type requires a different method. Choosing the wrong one produces a wrong answer.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Apply the chain rule identity for a(x) problems</strong>
+                <span class="goal-detail">Use <mark>a = v dv/dx</mark> to handle problems where time is not given (e.g., braking distance). This identity also previews the work-energy theorem in Lecture 4.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header caution">Caution ⚠</div>
+          <div class="card-body">
+            <p class="caution-body">v = 0 does NOT mean a = 0. A ball at its peak has zero velocity but acceleration of −9.81 m/s². The constant-acceleration formulas are <strong>ONLY valid when a is truly constant</strong> — never apply them to a(t) or a(x) problems.</p>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-quiz-btn" class="btn primary">Start Gatekeeper →</button>
+        </div>
+      </section>
+
+      <!-- ② Quiz (content loaded by app.js) -->
+      <section id="quiz-section" class="card hidden">
+        <div class="progress-wrap"><span id="progress-text">Question 1 / 5</span></div>
+        <h2 id="question-title">Question</h2>
+        <p id="question-text"></p>
+        <div id="choices-container" class="choices"></div>
+        <div class="button-row">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn-correct" class="btn secondary hidden">Next</button>
+        </div>
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <!-- ③ Supplementary Video -->
+      <section id="supplementary-section" class="card hidden">
+        <div class="card-header">Quick Fix</div>
+        <div class="card-body">
+          <p id="supplementary-message"></p>
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <video id="supp-video" controls preload="metadata" class="supp-video">
+              <source id="supp-video-source" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div id="supp-next-row" class="hidden" style="justify-content:center; margin-top:16px;">
+            <button id="next-btn-wrong" class="btn secondary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Main Video + Exercises (same section) -->
+      <section id="main-video-section" class="hidden">
+
+        <div class="card">
+          <div class="card-header">Main Lecture Video</div>
+          <div class="card-body">
+            <div class="lecture-instructions">
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+            </div>
+            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
+              <source src="videos/main/lecture1_main.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Differentiation Chain</div>
+              <div class="ex-body">A particle's position is given by x(t) = 3t² + 2t. Find: (1) the velocity v(t), and (2) the acceleration a(t).</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Re-deriving Constant Acceleration Formulas</div>
+              <div class="ex-body">Given constant acceleration a = 4 and initial conditions v(0) = v₀, x(0) = x₀, derive v(t) and x(t) using integration.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Standard Problems — Core</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Standard 1</div>
+              <div class="ex-title">Acceleration as a Function of Time</div>
+              <div class="ex-body">a(t) = 6t, with v(0) = 0, x(0) = 0. Find v(t) and x(t).</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 2</div>
+              <div class="ex-title">Acceleration as a Function of Position</div>
+              <div class="ex-body">a(x) = 2x, with x = 0, v = 0. Find v(x). <em>Hint: use a = v dv/dx.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 3</div>
+              <div class="ex-title">Velocity-Dependent Acceleration</div>
+              <div class="ex-body">a = −kv. Find v(t). <em>Hint: separate variables.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Bridge to Energy</div>
+              <div class="ex-body">a(x) = −kx. Find v(x). Notice what the result tells you about energy conservation.</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data01.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 5: System of Particles & Center of Mass</title>
+  <link rel="stylesheet" href="style_v2.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 5: System of Particles & Center of Mass | Chapter 14</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          Review where we're coming from and what you'll be able to do by the end of this lecture.
+          When you're ready, click <strong>Start Gatekeeper</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Lecture 4 — Work, Energy & Momentum</div>
+            <p class="block-body">You learned to choose between scalar methods: work-energy (displacement-based) and impulse-momentum (time or collision-based). You solved collision problems using momentum conservation and the coefficient of restitution. Today we extend these ideas from a single particle to a system of particles.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Learning Goals for This Lecture</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Understand why internal forces cancel and only external forces drive the mass center</strong>
+                <span class="goal-detail">By Newton's third law, every internal force has an equal and opposite partner — their sum is always zero. The mass center G accelerates only due to external forces: <mark>ΣF_ext = m·a_G</mark>.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Identify the conditions for linear momentum conservation</strong>
+                <span class="goal-detail">If <mark>ΣF_ext = 0</mark>, the total linear momentum L = m·v_G is constant. This applies during explosions, separations, and collisions. Always check the external force condition before applying conservation.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Track the mass center through explosions and separations</strong>
+                <span class="goal-detail">An internal explosion <mark>cannot change the trajectory of the mass center</mark>. After a fireworks shell explodes, its mass center continues on the same parabola as before. Only external forces determine where G goes.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header caution">Caution ⚠</div>
+          <div class="card-body">
+            <p class="caution-body">Internal forces (explosion, spring release) do <strong>NOT</strong> change the total momentum of the system — they only redistribute it among fragments. Linear momentum conservation requires zero net external force; <strong>gravity often violates this condition</strong>. Always draw a system boundary first and identify what is inside.</p>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-quiz-btn" class="btn primary">Start Gatekeeper →</button>
+        </div>
+      </section>
+
+      <!-- ② Quiz (content loaded by app.js) -->
+      <section id="quiz-section" class="card hidden">
+        <div class="progress-wrap"><span id="progress-text">Question 1 / 5</span></div>
+        <h2 id="question-title">Question</h2>
+        <p id="question-text"></p>
+        <div id="choices-container" class="choices"></div>
+        <div class="button-row">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn-correct" class="btn secondary hidden">Next</button>
+        </div>
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <!-- ③ Supplementary Video -->
+      <section id="supplementary-section" class="card hidden">
+        <div class="card-header">Quick Fix</div>
+        <div class="card-body">
+          <p id="supplementary-message"></p>
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <video id="supp-video" controls preload="metadata" class="supp-video">
+              <source id="supp-video-source" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div id="supp-next-row" class="hidden" style="justify-content:center; margin-top:16px;">
+            <button id="next-btn-wrong" class="btn secondary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Main Video + Exercises -->
+      <section id="main-video-section" class="hidden">
+        <div class="card">
+          <div class="card-header">Main Lecture Video</div>
+          <div class="card-body">
+            <div class="lecture-instructions">
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+            </div>
+            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
+              <source src="videos/main/lecture5_main_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Position of the Center of Mass</div>
+              <div class="ex-body">Two masses: m₁ = 2 kg at x₁ = 1 m and m₂ = 6 kg at x₂ = 5 m. Find the position of the center of mass x_G.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Internal Forces Cannot Move the Mass Center</div>
+              <div class="ex-body">Two identical 3 kg masses A and B are connected by a compressed spring on a frictionless surface. Both are initially at rest. After release, A moves left at 3 m/s. (1) Find the velocity of B. (2) What happens to the mass center? (3) Why?</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Standard Problems — Core</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Standard 1</div>
+              <div class="ex-title">Explosion — Momentum Conservation</div>
+              <div class="ex-body">A 10 kg shell is launched at v₀ = 20 m/s horizontally. At its highest point (v_y = 0) it explodes into two 5 kg fragments. Fragment 1 falls straight down (horizontal velocity = 0). Find the velocity of Fragment 2. <em>Hint: apply linear momentum conservation at the instant of explosion. What is the total horizontal momentum just before?</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 2</div>
+              <div class="ex-title">Astronaut Recoil</div>
+              <div class="ex-body">A 60 kg astronaut floating at rest in space throws a 2 kg tool at 10 m/s (relative to the ground). Find the astronaut's recoil velocity. State the principle used and check whether the required condition is satisfied.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 3</div>
+              <div class="ex-title">Rocket Thrust</div>
+              <div class="ex-body">A rocket has initial total mass M = 2000 kg (including 500 kg of fuel). It burns fuel at ṁ = 20 kg/s with exhaust velocity v_e = 3000 m/s relative to the rocket. Find the thrust force. Ignore gravity. <em>Hint: thrust = ṁ · v_e.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Kinetic Energy Decomposition</div>
+              <div class="ex-body">Two particles on a line: m₁ = 3 kg with v₁ = 4 m/s (right), m₂ = 5 kg with v₂ = −2 m/s (left). Calculate: (1) total KE of the system, (2) KE of the mass center, (3) KE relative to the mass center. Verify that (1) = (2) + (3). What does this decomposition tell you about internal energy?</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data05.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

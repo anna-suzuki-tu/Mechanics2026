@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 4: Work, Energy & Momentum</title>
+  <link rel="stylesheet" href="style_v2.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 4: Work, Energy & Momentum | Chapter 13</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          Review where we're coming from and what you'll be able to do by the end of this lecture.
+          When you're ready, click <strong>Start Gatekeeper</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Lecture 3 — Newton's Laws & FBD</div>
+            <p class="block-body">You applied Newton's second law using FBDs and strategic axis choices. You can now set up equations of motion for particles on slopes, in circular motion, and in constraint systems. Today we introduce scalar methods that bypass force analysis entirely.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Learning Goals for This Lecture</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Select the right scalar method before calculating</strong>
+                <span class="goal-detail">Displacement/height given → <mark>work-energy method</mark>. Time or collision given → <mark>impulse-momentum method</mark>. Never start calculating before choosing the method — the wrong choice costs you the entire solution.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Apply the work-energy theorem including non-conservative forces</strong>
+                <span class="goal-detail">T₁ + ΣU₁₋₂ = T₂. When friction is present, subtract its work: <mark>T₁ + V₁ − W_friction = T₂ + V₂</mark>. Mechanical energy is conserved only when all forces are conservative.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Solve collision problems using momentum conservation and COR</strong>
+                <span class="goal-detail">Apply <mark>linear momentum conservation</mark> first. Then add the COR equation: e = (relative separation speed)/(relative approach speed). Two equations give two unknown post-collision velocities.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header caution">Caution ⚠</div>
+          <div class="card-body">
+            <p class="caution-body">Mechanical energy conservation <strong>FAILS</strong> when friction is present — always check for non-conservative forces first. The COR equation gives the relative velocity relationship; it does <strong>not</strong> replace momentum conservation. Power is P = F·v, not F·d.</p>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-quiz-btn" class="btn primary">Start Gatekeeper →</button>
+        </div>
+      </section>
+
+      <!-- ② Quiz (content loaded by app.js) -->
+      <section id="quiz-section" class="card hidden">
+        <div class="progress-wrap"><span id="progress-text">Question 1 / 5</span></div>
+        <h2 id="question-title">Question</h2>
+        <p id="question-text"></p>
+        <div id="choices-container" class="choices"></div>
+        <div class="button-row">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn-correct" class="btn secondary hidden">Next</button>
+        </div>
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <!-- ③ Supplementary Video -->
+      <section id="supplementary-section" class="card hidden">
+        <div class="card-header">Quick Fix</div>
+        <div class="card-body">
+          <p id="supplementary-message"></p>
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <video id="supp-video" controls preload="metadata" class="supp-video">
+              <source id="supp-video-source" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div id="supp-next-row" class="hidden" style="justify-content:center; margin-top:16px;">
+            <button id="next-btn-wrong" class="btn secondary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Main Video + Exercises -->
+      <section id="main-video-section" class="hidden">
+        <div class="card">
+          <div class="card-header">Main Lecture Video</div>
+          <div class="card-body">
+            <div class="lecture-instructions">
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+            </div>
+            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
+              <source src="videos/main/lecture4_main_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Work Done → Final Speed</div>
+              <div class="ex-body">A 5 kg block starts from rest on a frictionless horizontal surface. A constant force F = 15 N is applied over a displacement d = 3 m. Use the work-energy theorem to find the final speed.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Change in Kinetic Energy</div>
+              <div class="ex-body">A 2 kg particle moves at v₁ = 3 m/s. A net force does W = 25 J of work on it. Find the final speed v₂. <em>Hint: ΔKE = W.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Standard Problems — Core</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Standard 1</div>
+              <div class="ex-title">Incline with Friction — Two Methods</div>
+              <div class="ex-body">A 10 kg block slides down a 5 m ramp at 30° with μ_k = 0.25. Find the speed at the bottom using: (1) the work-energy method and (2) Newton's second law. Verify both answers match. <em>Hint: friction does negative work; W_friction = −μ_k N·d.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 2</div>
+              <div class="ex-title">Elastic Collision</div>
+              <div class="ex-body">Ball A (2 kg, v = 6 m/s) strikes stationary ball B (2 kg) head-on. The collision is perfectly elastic (e = 1). Find v_A and v_B after the collision. <em>Hint: use momentum conservation AND the COR equation simultaneously.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 3</div>
+              <div class="ex-title">Impulse and Average Force</div>
+              <div class="ex-body">A 0.5 kg ball hits a wall at 10 m/s and bounces back at 8 m/s. Contact time is Δt = 0.02 s. Find: (1) the impulse from the wall, and (2) the average force from the wall on the ball.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Three-Phase Energy Chain</div>
+              <div class="ex-body">A 3 kg block starts from rest at the top of a frictionless 30° incline (length 4 m). It hits a spring (k = 500 N/m) at the bottom, compresses it, then rebounds. Find: (1) the speed at the bottom just before the spring, (2) the maximum spring compression, (3) the speed when the block returns to the top of the incline. <em>Apply energy conservation at each phase transition.</em></div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data04.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

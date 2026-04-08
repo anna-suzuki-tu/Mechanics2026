@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 12: Analytical Mechanics II: Lagrange Equations</title>
+  <link rel="stylesheet" href="style_v2.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 12: Analytical Mechanics II: Lagrange Equations | Analytical Mechanics</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          Review where we're coming from and what you'll be able to do by the end of this lecture.
+          When you're ready, click <strong>Start Gatekeeper</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Lecture 11 — Analytical Mechanics I: Why Lagrangian?</div>
+            <p class="block-body">You identified Newton's limitations for constrained systems. You defined generalized coordinates and the Lagrangian L = T − V. You experienced how constraint forces disappear automatically when using scalar energy quantities, deriving the spring-mass equation of motion in three lines without a force diagram.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Learning Goals for This Lecture</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Derive and apply the Euler-Lagrange equation</strong>
+                <span class="goal-detail">The Euler-Lagrange equation: <mark>d/dt(∂L/∂q̇) − ∂L/∂q = 0</mark>. The procedure is always the same: compute ∂L/∂q̇, differentiate with respect to time, then subtract ∂L/∂q. Apply it to each generalized coordinate independently.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Recognize cyclic coordinates and their conservation law</strong>
+                <span class="goal-detail">A coordinate q is cyclic if L does not depend on q — only on q̇. In that case, <mark>∂L/∂q̇ = constant</mark>, meaning the corresponding generalized momentum is conserved. This is a direct route to conservation laws.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Apply the Lagrangian method to multi-DOF systems and rigid bodies</strong>
+                <span class="goal-detail">For a system with n degrees of freedom, write <mark>n Lagrange equations</mark> — one per generalized coordinate. Constraint forces that do no work never appear. This is why the Lagrangian scales to complex systems where Newton's method becomes intractable.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header caution">Caution ⚠</div>
+          <div class="card-body">
+            <p class="caution-body">The Euler-Lagrange equation requires differentiating ∂L/∂q̇ with respect to <strong>TIME</strong> — not with respect to q. This is d/dt(∂L/∂q̇), not ∂²L/∂q̇². For non-conservative forces (friction, external loads), add the generalized force Q_i to the right side: <mark>d/dt(∂L/∂q̇) − ∂L/∂q = Q_i</mark>.</p>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-quiz-btn" class="btn primary">Start Gatekeeper →</button>
+        </div>
+      </section>
+
+      <!-- ② Quiz (content loaded by app.js) -->
+      <section id="quiz-section" class="card hidden">
+        <div class="progress-wrap"><span id="progress-text">Question 1 / 5</span></div>
+        <h2 id="question-title">Question</h2>
+        <p id="question-text"></p>
+        <div id="choices-container" class="choices"></div>
+        <div class="button-row">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn-correct" class="btn secondary hidden">Next</button>
+        </div>
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <!-- ③ Supplementary Video -->
+      <section id="supplementary-section" class="card hidden">
+        <div class="card-header">Quick Fix</div>
+        <div class="card-body">
+          <p id="supplementary-message"></p>
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <video id="supp-video" controls preload="metadata" class="supp-video">
+              <source id="supp-video-source" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div id="supp-next-row" class="hidden" style="justify-content:center; margin-top:16px;">
+            <button id="next-btn-wrong" class="btn secondary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Main Video + Exercises -->
+      <section id="main-video-section" class="hidden">
+        <div class="card">
+          <div class="card-header">Main Lecture Video</div>
+          <div class="card-body">
+            <div class="lecture-instructions">
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+            </div>
+            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
+              <source src="videos/main/lecture12_main.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data12.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

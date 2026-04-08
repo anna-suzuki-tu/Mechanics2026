@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 2: Curvilinear Motion & Relative Motion</title>
+  <link rel="stylesheet" href="style_v2.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 2: Curvilinear Motion & Relative Motion | Chapter 11</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          Review where we're coming from and what you'll be able to do by the end of this lecture.
+          When you're ready, click <strong>Start Gatekeeper</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Lecture 1 — Kinematics of a Particle</div>
+            <p class="block-body">You rebuilt the calculus chain: x → v → a by differentiation, a → v → x by integration. You learned to classify acceleration as constant, a(t), or a(x), and to choose the correct integration method. The chain-rule identity a = v dv/dx was your key tool.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Learning Goals for This Lecture</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Decompose curved motion into tangential and normal components</strong>
+                <span class="goal-detail">The tangential component <mark>a_t = dv/dt</mark> controls speed change. The normal component <mark>a_n = v²/ρ</mark> controls direction change. These two are always perpendicular and completely independent.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Solve projectile motion by treating x and y as independent</strong>
+                <span class="goal-detail">Horizontal acceleration is zero (v_x = constant). Vertical acceleration is −g. <mark>Solve each axis separately</mark> and combine only at the end.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Apply relative velocity as simple vector subtraction</strong>
+                <span class="goal-detail"><mark>v_B/A = v_B − v_A</mark>. This answers: 'What does B look like from A's point of view?' Choosing the right reference frame can make a complex problem trivial.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header caution">Caution ⚠</div>
+          <div class="card-body">
+            <p class="caution-body">Constant speed does <strong>NOT</strong> mean zero acceleration. A car turning at constant speed has a_n ≠ 0 — direction is changing, so acceleration exists. This is one of the most common errors in this chapter.</p>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-quiz-btn" class="btn primary">Start Gatekeeper →</button>
+        </div>
+      </section>
+
+      <!-- ② Quiz (content loaded by app.js) -->
+      <section id="quiz-section" class="card hidden">
+        <div class="progress-wrap"><span id="progress-text">Question 1 / 5</span></div>
+        <h2 id="question-title">Question</h2>
+        <p id="question-text"></p>
+        <div id="choices-container" class="choices"></div>
+        <div class="button-row">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn-correct" class="btn secondary hidden">Next</button>
+        </div>
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <!-- ③ Supplementary Video -->
+      <section id="supplementary-section" class="card hidden">
+        <div class="card-header">Quick Fix</div>
+        <div class="card-body">
+          <p id="supplementary-message"></p>
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <video id="supp-video" controls preload="metadata" class="supp-video">
+              <source id="supp-video-source" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div id="supp-next-row" class="hidden" style="justify-content:center; margin-top:16px;">
+            <button id="next-btn-wrong" class="btn secondary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Main Video + Exercises -->
+      <section id="main-video-section" class="hidden">
+
+        <div class="card">
+          <div class="card-header">Main Lecture Video</div>
+          <div class="card-body">
+            <div class="lecture-instructions">
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+            </div>
+            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
+              <source src="videos/main/lecture2_main_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Tangential vs Normal — Direction Identification</div>
+              <div class="ex-body">A car moves along a curved path. At a certain instant its speed is increasing and it is turning left. Describe the directions of: (1) tangential acceleration a_t, and (2) normal acceleration a_n.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Normal Acceleration in Circular Motion</div>
+              <div class="ex-body">A particle moves in a circle of radius r = 5 m with constant speed v = 10 m/s. Find the normal acceleration.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Standard Problems — Core</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Standard 1</div>
+              <div class="ex-title">T–N Decomposition with Time-Varying Speed</div>
+              <div class="ex-body">A particle moves along a curved path with speed v = 4t and radius of curvature ρ = 8. Find the total acceleration at t = 2. <em>Hint: find a_t and a_n separately, then combine.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 2</div>
+              <div class="ex-title">Projectile at the Highest Point</div>
+              <div class="ex-body">A projectile is launched at an angle. At the highest point of its trajectory: (1) What is the velocity? (2) What is the acceleration? <em>Treat x and y as independent.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 3</div>
+              <div class="ex-title">Relative Velocity — Vector Subtraction</div>
+              <div class="ex-body">Car A moves east at 20 m/s. Car B moves north at 15 m/s. Find the velocity of B relative to A (v_B/A). <em>Hint: v_B/A = v_B − v_A.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Relative Motion in a Rotating Frame</div>
+              <div class="ex-body">Car A moves in a circle of radius R at constant speed v. A passenger inside throws a ball straight upward. Describe the motion of the ball (1) in the inertial frame and (2) relative to the car. What does this tell you about fictitious forces?</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data02.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

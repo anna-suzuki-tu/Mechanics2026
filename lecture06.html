@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 6: Kinematics of Rigid Bodies</title>
+  <link rel="stylesheet" href="style_v2.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 6: Kinematics of Rigid Bodies | Chapter 15</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          Review where we're coming from and what you'll be able to do by the end of this lecture.
+          When you're ready, click <strong>Start Gatekeeper</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Lecture 5 — System of Particles & Center of Mass</div>
+            <p class="block-body">You extended Newton's laws to systems of particles: only external forces drive the mass center, and linear momentum is conserved when ΣF_ext = 0. Internal forces always cancel. Now we extend further — from point masses to rigid bodies that have shape and can rotate.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Learning Goals for This Lecture</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Decompose general plane motion into translation plus rotation</strong>
+                <span class="goal-detail">Any rigid body motion = translation of a reference point A + rotation about A with angular velocity ω. The relative velocity formula <mark>v_B = v_A + ω × r_B/A</mark> always holds. v_B/A is always perpendicular to line AB.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Use the Instantaneous Center of Rotation (ICR) for fast velocity analysis</strong>
+                <span class="goal-detail">The ICR is the point with <mark>zero velocity</mark> at a given instant. All other points have speed proportional to their distance from the ICR. The ICR method gives velocities in one step — but it <strong>cannot</strong> be used for acceleration.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Apply the full vector equation for acceleration analysis</strong>
+                <span class="goal-detail"><mark>a_B = a_A + α × r_B/A − ω²r_B/A</mark>. The last term is the centripetal component, always directed toward A. The ICR method cannot be extended to acceleration — always use the full equation.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header caution">Caution ⚠</div>
+          <div class="card-body">
+            <p class="caution-body">The ICR changes position over time — it is <strong>instantaneous</strong>. Never use the same ICR for two different time steps. The contact point of a rolling wheel has <strong>zero velocity but nonzero acceleration</strong> (directed upward toward the center). v = 0 does NOT mean a = 0.</p>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-quiz-btn" class="btn primary">Start Gatekeeper →</button>
+        </div>
+      </section>
+
+      <!-- ② Quiz (content loaded by app.js) -->
+      <section id="quiz-section" class="card hidden">
+        <div class="progress-wrap"><span id="progress-text">Question 1 / 5</span></div>
+        <h2 id="question-title">Question</h2>
+        <p id="question-text"></p>
+        <div id="choices-container" class="choices"></div>
+        <div class="button-row">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn-correct" class="btn secondary hidden">Next</button>
+        </div>
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <!-- ③ Supplementary Video -->
+      <section id="supplementary-section" class="card hidden">
+        <div class="card-header">Quick Fix</div>
+        <div class="card-body">
+          <p id="supplementary-message"></p>
+          <div style="display:flex; justify-content:center; margin-top:16px;">
+            <video id="supp-video" controls preload="metadata" class="supp-video">
+              <source id="supp-video-source" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div id="supp-next-row" class="hidden" style="justify-content:center; margin-top:16px;">
+            <button id="next-btn-wrong" class="btn secondary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Main Video + Exercises -->
+      <section id="main-video-section" class="hidden">
+        <div class="card">
+          <div class="card-header">Main Lecture Video</div>
+          <div class="card-body">
+            <div class="lecture-instructions">
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+            </div>
+            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
+              <source src="videos/main/lecture6_main_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Velocity of a Point on a Moving Link</div>
+              <div class="ex-body">Rigid link AB (length 0.5 m, horizontal) has pin A moving right at v_A = 4 m/s. The link rotates at ω = 2 rad/s clockwise. Find the velocity of B using v_B = v_A + ω × r_B/A. <em>Note: ω × r_B/A is perpendicular to AB.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Rolling Wheel — Velocity at Key Points</div>
+              <div class="ex-body">A wheel of radius r = 0.4 m rolls without slipping. Its center C moves at v_C = 2 m/s to the right. Find the velocity of: (a) the contact point P (bottom), and (b) the top point T. <em>Hint: use v = v_C + ω × r for each point; no-slip gives ω = v_C/r.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Standard Problems — Core</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Standard 1</div>
+              <div class="ex-title">Sliding Bar — ICR Method</div>
+              <div class="ex-body">A 1 m bar AB slides with end A on the floor and end B against a vertical wall. At the instant shown, A moves to the right at 3 m/s and the bar makes a 30° angle with the horizontal. Use the ICR method to find ω and v_B. <em>Hint: the ICR lies at the intersection of lines drawn perpendicular to each end's velocity.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 2</div>
+              <div class="ex-title">Crank-Slider Mechanism</div>
+              <div class="ex-body">Crank OA (length 0.3 m) rotates at ω_OA = 10 rad/s counterclockwise. At the instant when OA is vertical (pointing up), connecting rod AB (length 0.5 m) is horizontal. Find the velocity of slider B using the relative velocity method: v_B = v_A + ω_AB × r_B/A.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 3</div>
+              <div class="ex-title">Two-Link Mechanism</div>
+              <div class="ex-body">Links AB and BC (each 0.6 m). A is pinned to the ground; C slides horizontally. At the instant when AB is vertical and BC is horizontal, link AB rotates at ω_AB = 3 rad/s counterclockwise. Find ω_BC and v_C. <em>Hint: v_C = v_B + ω_BC × r_C/B; v_C must be horizontal.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Acceleration Analysis — Why ICR Fails</div>
+              <div class="ex-body">Using the same sliding bar from Standard 1 (A moves at constant 3 m/s, so a_A = 0), find the acceleration of point B. Use a_B = a_A + α × r_B/A − ω²r_B/A. Then explain why the ICR method cannot give acceleration: the ICR is changing position, so it has its own acceleration — the ICR is not a fixed center.</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data06.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
