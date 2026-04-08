@@ -15,7 +15,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 1-1: Geometrical Significance of Motion Curves",
     supplementaryText:
       "You missed the geometric meaning of the v-t graph. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/1-1.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_1-1.mp4"
   },
   {
     id: "1-2",
@@ -31,7 +31,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 1-2: When Can You Use Constant-Acceleration Formulas?",
     supplementaryText:
       "You missed the limit of constant-acceleration formulas. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/1-2.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_1-2.mp4"
   },
   {
     id: "1-3",
@@ -47,7 +47,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 1-3: Velocity Zero Does Not Mean Acceleration Zero",
     supplementaryText:
       "You mixed up velocity and acceleration. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/1-3.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_1-3.mp4"
   },
   {
     id: "1-4",
@@ -63,7 +63,7 @@ const questions = [
     supplementaryTitle: "Supplementary Video 1-4: Slope and Rate of Change in Motion Graphs",
     supplementaryText:
       "You missed the derivative relationship between position and velocity. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/1-4.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_1-4.mp4"
   },
   {
     id: "1-5",
@@ -79,6 +79,6 @@ const questions = [
     supplementaryTitle: "Supplementary Video 1-5: Sign of Velocity vs. Sign of Acceleration",
     supplementaryText:
       "You missed the difference between direction of motion and change of speed. Watch this short video, then continue.",
-    supplementaryVideo: "videos/supplementary/1-5.mp4"
+    supplementaryVideo: "videos/supplementary/supplementary_video_1-5.mp4"
   }
 ];
