@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mechanics 2026 — Guidance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+    body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; margin: 0; overflow: hidden; }
+    .slide-container { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+    /* ── 全スライド共通: Slide 2と同じ構造 ── */
+    .slide {
+      width: 100%; height: 100%;
+      padding: 1.8rem 3rem;
+      display: none; flex-direction: column; justify-content: center;
+      background-color: #ffffff; color: #1f2937;
+      position: relative; box-sizing: border-box; overflow: hidden;
+    }
+    .slide.active { display: flex; }
+
+    .text-accent { color: #356f8c; }
+    .text-accent2 { color: #abc5d1; }
+    .bg-accent   { background-color: #356f8c; }
+    .text-sub    { color: #c6a54a; }
+    .bg-sub      { background-color: #c6a54a; }
+    .bg-dark     { background-color: #1f2937; }
+
+    .progress-bar { position: absolute; bottom: 0; left: 0; height: 5px; background-color: #356f8c; transition: width 0.3s ease; }
+    .controls { position: fixed; bottom: 1.5rem; right: 1.5rem; display: flex; gap: 0.75rem; z-index: 100; }
+    .btn { padding: 0.5rem 1.2rem; background: #1f2937; color: white; border-radius: 6px; cursor: pointer; font-weight: bold; transition: all 0.2s; user-select: none; font-size: 1rem; }
+    .btn:hover { background: #374151; transform: translateY(-1px); }
+    .btn-num { background: white; color: #1f2937; border: 2px solid #1f2937; }
+    .grid-bg { background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 28px 28px; }
+
+    /* ── ヘッダー（全スライド共通） ── */
+    .left-border { border-left: 6px solid #356f8c; padding-left: 1rem; }
+    .slide-title { font-size: 2.5rem; font-weight: 900; }
+    .slide-sub   { font-size: 1.2rem; color: #6b7280; margin-top: 0.2rem; }
+
+    /* ── パーツ ── */
+    .step-circle { width: 2.6rem; height: 2.6rem; border-radius: 50%; background: #356f8c; color: white; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.2rem; flex-shrink: 0; }
+    .badge { display: inline-block; padding: 0.25rem 0.8rem; border-radius: 4px; font-size: 1.25rem; font-weight: 700; }
+
+    /* ── Table ── */
+    table { width: 100%; border-collapse: collapse; font-size: 1.2rem; }
+    th { background: #356f8c; color: white; padding: 0.65rem 1rem; text-align: left; font-weight: 700; }
+    td { padding: 0.6rem 1rem; border-bottom: 1px solid #e5e7eb; }
+    tr:nth-child(even) td { background: #f8fafc; }
+    tr.exam     td { background: #c6a54a !important; font-weight: 700; color: white;}
+    tr.holiday  td { background: #f3f4f6 !important; color: #9ca3af; font-style: italic; }
+    tr.self-study td { background: #f0f7fa !important; }
+  </style>
+</head>
+<body>
+<div class="slide-container">
+
+  <!-- ========== SLIDE 1: Title ========== -->
+  <div class="slide grid-bg active">
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-16">
+      <div class="bg-accent text-white font-bold px-5 py-2 rounded mb-8" style="font-size:1.2rem;letter-spacing:0.15em;">
+        MECHANICS 2026 — SESSION 0: GUIDANCE
+      </div>
+      <h1 style="font-size:3.8rem;font-weight:900;line-height:1.15;" class="text-gray-900 mb-4">
+        Rebuilding <span class="text-accent">Mechanics</span><br>from First Principles
+      </h1>
+      <p style="font-size:1.4rem;" class="text-gray-500 mb-10">1Q · April 10 – June 5, 2026</p>
+      <div class="grid grid-cols-2 gap-4 text-left" style="font-size:1.25rem;">
+        <div class="bg-accent text-white px-6 py-3 rounded-lg font-bold">
+          📅 Fri 8:50–10:20<br><span style="font-weight:400;font-size:1rem;">Kawauchi C-104</span>
+        </div>
+        <div class="bg-accent text-white px-6 py-3 rounded-lg font-bold">
+          📅 Mon 10:30–12:00<br><span style="font-weight:400;font-size:1rem;">Mech 2nd Bldg 214</span>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar"></div>
+  </div>
+
+  <!-- ========== SLIDE 2: Course Schedule ========== -->
+  <div class="slide">
+    <div class="left-border mb-3">
+      <h2 class="slide-title">Course Schedule</h2>
+      <p class="slide-sub">1Q: April 10 – June 5, 2026</p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <table>
+          <thead><tr><th>#</th><th>Date</th><th>Topic</th></tr></thead>
+          <tbody>
+            <tr><td>0</td><td>Apr 10 Fri</td><td>Guidance</td></tr>
+            <tr><td>1</td><td>Apr 10 Fri</td><td>Kinematics rebuilt</td></tr>
+            <tr><td>2</td><td>Apr 13 Mon</td><td>Curvilinear &amp; relative motion</td></tr>
+            <tr><td>3</td><td>Apr 17 Fri</td><td>Newton's laws &amp; FBDs</td></tr>
+            <tr><td>4</td><td>Apr 20 Mon</td><td>Work, energy &amp; momentum</td></tr>
+            <tr><td>5</td><td>Apr 24 Fri</td><td>Particle systems &amp; conservation</td></tr>
+            <tr><td>6</td><td>Apr 27 Mon</td><td>Rigid body kinematics</td></tr>
+            <tr class="holiday"><td>—</td><td>May 1 Fri</td><td>Holiday (Golden Week)</td></tr>
+            <tr class="exam"><td>7</td><td>May 7 Thu ★</td><td>🎓 Midterm Exam</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.85rem;" class="text-gray-400 mt-1">★ May 7 is Thursday, substituting for Monday class</p>
+      </div>
+      <div>
+        <table>
+          <thead><tr><th>#</th><th>Date</th><th>Topic</th></tr></thead>
+          <tbody>
+            <tr><td>8</td><td>May 11 Mon</td><td>Rigid body kinetics</td></tr>
+            <tr><td>9</td><td>May 15 Fri</td><td>Rigid body energy &amp; impact</td></tr>
+            <tr><td>10</td><td>May 18 Mon</td><td>Vibrations</td></tr>
+            <tr><td>11</td><td>May 22 Fri</td><td>Analytical mechanics ①</td></tr>
+            <tr><td>12</td><td>May 25 Mon</td><td>Analytical mechanics ②</td></tr>
+            <tr class="self-study"><td>13</td><td>May 29 Fri</td><td>Self-study session</td></tr>
+            <tr class="self-study"><td>14</td><td>Jun 1 Mon</td><td>Buffer / review</td></tr>
+            <tr class="exam"><td>15</td><td>Jun 5 Fri ★</td><td>🎓 Final Exam</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="progress-bar"></div>
+  </div>
+
+  <!-- ========== SLIDE 3: Course Map ========== -->
+  <div class="slide">
+    <div class="left-border mb-3">
+      <h2 class="slide-title">What You'll Learn</h2>
+      <p class="slide-sub">Three parts — one arc from Newton to Lagrange</p>
+    </div>
+    <div class="grid grid-cols-3 gap-5">
+      <div class="rounded-xl p-5" style="border:2.5px solid #356f8c;">
+        <span class="badge bg-accent text-white mb-3 block">Sessions 1–4</span>
+        <p style="font-size:1.25rem;font-weight:900;" class="text-accent mb-1">Part 1</p>
+        <p style="font-size:1.75rem;font-weight:700;" class="text-gray-900 mb-4">Particle Mechanics</p>
+        <ul style="font-size:1.25rem;" class="text-gray-600 space-y-2.5">
+          <li>📐 Kinematics rebuilt from calculus</li>
+          <li>🔄 Curvilinear &amp; relative motion</li>
+          <li>⚖️ Newton's laws &amp; FBDs</li>
+          <li>⚡ Work, energy &amp; momentum</li>
+        </ul>
+      </div>
+      <div class="rounded-xl p-5" style="border:2.5px solid #1f2937;">
+        <span class="badge text-white mb-3 block" style="background:#1f2937;">Sessions 5–9</span>
+        <p style="font-size:1.25rem;font-weight:900;" class="text-gray-700 mb-1">Part 2</p>
+        <p style="font-size:1.75rem;font-weight:700;" class="text-gray-900 mb-4">Systems &amp; Rigid Bodies</p>
+        <ul style="font-size:1.25rem;" class="text-gray-600 space-y-2.5">
+          <li>🎯 Particle systems &amp; mass center</li>
+          <li>🔩 Rigid body kinematics</li>
+          <li>💪 Rigid body kinetics</li>
+          <li>💥 Energy &amp; impact</li>
+        </ul>
+      </div>
+      <div class="rounded-xl p-5" style="border:2.5px solid #c6a54a;">
+        <span class="badge bg-sub text-white mb-3 block">Sessions 10–12</span>
+        <p style="font-size:1.25rem;font-weight:900;" class="text-sub mb-1">Part 3</p>
+        <p style="font-size:1.75rem;font-weight:700;" class="text-gray-900 mb-4">Vibrations &amp; Analytical Mechanics</p>
+        <ul style="font-size:1.25rem;" class="text-gray-600 space-y-2.5">
+          <li>〜 1-DOF vibrations</li>
+          <li>✨ Why Lagrangian mechanics?</li>
+          <li>⚙️ Lagrange's equations</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-4 text-center rounded-lg py-3 px-6" style="background:#f0f7fa;font-size:1.25rem;">
+      <strong>"solve with force vectors (Newton)"</strong> → <strong class="text-accent">"solve with energy scalars (Lagrange)"</strong>
+    </div>
+    <div class="mt-4 py-3 px-6" style="font-size:1rem;">
+       Textbook:　Vector Mechanics for Engineers: Dynamics (in SI Units) by Ferdinand Beer et al. (McGraw Hill Higher Education; 9th Revised edition)
+    <div class="mt-4 py-3 px-6" style="font-size:1rem;">
+       ・Introduction to Analytical Mechanics by Amitabha Ghosh (eBook) https://doi.org/10.1007/978-981-97-2484-0
+    </div>
+    <div class="progress-bar"></div>
+  </div>
+
+  <!-- ========== SLIDE 4: How Each Session Works ========== -->
+  <div class="slide" style="background:#1f2937;color:white;">
+    <div class="left-border mb-3" style="border-color:#356f8c;">
+      <h2 class="slide-title" style="color:white;">How Each Session Works</h2>
+      <p class="slide-sub" style="color:#9ca3af;">90-minute format — 6 steps, every session</p>
+    </div>
+    <div class="grid grid-cols-6 gap-3 mb-5">
+      <div class="flex flex-col items-center gap-2 text-center">
+        <div class="step-circle"  style="background:#abc5d1">1</div>
+        <p style="font-size:2rem;font-weight:700;" class="text-accent2">Intro</p>
+        <p style="font-size:1.25rem;color:#9ca3af;">Link to last session · Today's goals</p>
+      </div>
+      <div class="flex flex-col items-center gap-2 text-center">
+        <div class="step-circle" style="background:#c6a54a;">2</div>
+        <p style="font-size:2rem;font-weight:700;" class="text-sub">Gatekeeper</p>
+        <p style="font-size:1.25rem;color:#9ca3af;">Concept check · 5 questions</p>
+      </div>
+      <div class="flex flex-col items-center gap-2 text-center">
+        <div class="step-circle" style="background:#374151;">3</div>
+        <p style="font-size:2rem;font-weight:700;color:#9ca3af;">Supp. Video</p>
+        <p style="font-size:1.25rem;color:#9ca3af;">Wrong answers only · Fill the gap</p>
+      </div>
+      <div class="flex flex-col items-center gap-2 text-center">
+        <div class="step-circle"  style="background:#abc5d1">4</div>
+        <p style="font-size:2rem;font-weight:700;" class="text-accent2">Main Video</p>
+        <p style="font-size:1.25rem;color:#9ca3af;">Shortest solution · Key techniques</p>
+      </div>
+      <div class="flex flex-col items-center gap-2 text-center">
+        <div class="step-circle"  style="background:#abc5d1">5</div>
+        <p style="font-size:2rem;font-weight:700;" class="text-accent2">Problems</p>
+        <p style="font-size:1.25rem;color:#9ca3af;">Basic ×2 · Standard ×3 · Advanced ×1</p>
+      </div>
+      <div class="flex flex-col items-center gap-2 text-center">
+        <div class="step-circle" style="background:#c6a54a;">6</div>
+        <p style="font-size:2rem;font-weight:700;" class="text-sub">Report</p>
+        <p style="font-size:1.25rem;color:#9ca3af;">Standard 3 problems · Submit</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="rounded-xl p-5" style="background:#374151;">
+        <p style="font-size:1.75rem;font-weight:700; " class="text-accent2 mb-2">🎯 What the Gatekeeper does</p>
+        <p style="font-size:1.25rem;color:#d1d5db;line-height:1.7;">
+          5 diagnostic questions before the main content.<br>
+          Wrong answer → a short supplementary video plays automatically.<br>
+          <span class="text-sub font-bold">Catches "I thought I understood" before it becomes a problem.</span>
+        </p>
+      </div>
+      <div class="rounded-xl p-5" style="background:#374151;">
+        <p style="font-size:1.75rem;font-weight:700;" class="text-accent2 mb-2">📋 Materials per session</p>
+        <p style="font-size:1.25rem;color:#d1d5db;line-height:1.7;">
+          Distributed via <strong style="color:white;">Google Classroom</strong>:<br>
+          • <span class="text-sub font-bold">HTML page</span> — Gatekeeper + videos + problems<br>
+          • <span class="text-sub font-bold">Detailed report sheet</span>
+        </p>
+      </div>
+    </div>
+    <div class="progress-bar"></div>
+  </div>
+
+  <!-- ========== SLIDE 5: Reports & Deadlines ========== -->
+  <div class="slide">
+    <div class="left-border mb-3">
+      <h2 class="slide-title">Reports &amp; Deadlines</h2>
+      <p class="slide-sub">What to submit, when, and how</p>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div class="flex flex-col gap-4">
+        <div class="rounded-xl p-5" style="border:2.5px solid #356f8c;">
+          <p style="font-size:1.75rem;font-weight:700;" class="text-accent mb-3">📝 What to submit</p>
+          <ul style="font-size:1.25rem;" class="text-gray-700 space-y-2">
+            <li><strong>Target:</strong> Standard problems — 3 required</li>
+            <li><strong>Optional:</strong> Advanced problem — 1</li>
+            <li><strong>Format:</strong> PDF or Word</li>
+            <li><strong>Where:</strong> Google Classroom</li>
+          </ul>
+        </div>
+        <div class="rounded-xl p-5" style="border:2.5px solid #c6a54a;">
+          <p style="font-size:1.75rem;font-weight:700;" class="text-sub mb-3">⏰ Deadline</p>
+          <p style="font-size:1.25rem;" class="text-gray-700 mb-3">Due by the <strong>start of the next class</strong></p>
+          <div class="rounded-lg p-3" style="background:#fef9ec;font-size:1.1rem;">
+            <strong>Late penalty:</strong> Score ÷ (delay days + 1)
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl p-5" style="border:2.5px solid #1f2937;">
+        <p style="font-size:1.75rem;font-weight:700;" class="text-gray-900 mb-4">✍️ Required content for each problem</p>
+        <div class="flex flex-col gap-4">
+          <div class="flex gap-4 items-start">
+            <div class="step-circle flex-shrink-0">①</div>
+            <div>
+              <p style="font-size:1.25rem;font-weight:700;" class="text-gray-900">Solution</p>
+              <p style="font-size:1rem;" class="text-gray-500">Your full calculation and answer</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="step-circle flex-shrink-0">②</div>
+            <div>
+              <p style="font-size:1.25rem;font-weight:700;" class="text-accent">Why you chose this method</p>
+              <p style="font-size:1rem;" class="text-gray-500">Explain your reasoning for the approach</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="step-circle flex-shrink-0">③</div>
+            <div>
+              <p style="font-size:1.25rem;font-weight:700;" class="text-gray-900">Alternative approaches</p>
+              <p style="font-size:1rem;" class="text-gray-500">Could you solve it a different way?</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 rounded-lg p-3" style="background:#f0f7fa;font-size:1.25rem;">
+          <strong class="text-accent">The process matters as much as the answer.</strong>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar"></div>
+  </div>
+
+  <!-- ========== SLIDE 6: Grading & Exams ========== -->
+  <div class="slide">
+    <div class="left-border mb-3">
+      <h2 class="slide-title">Grading &amp; Exams</h2>
+      <p class="slide-sub">How your grade is calculated — and what to expect in each exam</p>
+    </div>
+    <div class="grid grid-cols-3 gap-5">
+      <div class="rounded-xl p-5" style="border:2.5px solid #356f8c;">
+        <p style="font-size:1.75rem;font-weight:700;" class="text-accent mb-4">Grade Breakdown</p>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="rounded-lg flex items-center justify-center text-white font-black flex-shrink-0 bg-accent" style="width:4rem;height:4rem;font-size:1.5rem;">30%</div>
+            <div>
+              <p style="font-size:1.25rem;font-weight:700;">Midterm Exam</p>
+              <p style="font-size:1rem;" class="text-gray-500">Session 7 · May 7</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="rounded-lg flex items-center justify-center text-white font-black flex-shrink-0 bg-accent" style="width:4rem;height:4rem;font-size:1.5rem;">30%</div>
+            <div>
+              <p style="font-size:1.25rem;font-weight:700;">Final Exam</p>
+              <p style="font-size:1rem;" class="text-gray-500">Session 15 · Jun 5</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="rounded-lg flex items-center justify-center text-white font-black flex-shrink-0 bg-sub" style="width:4rem;height:4rem;font-size:1.5rem;">40%</div>
+            <div>
+              <p style="font-size:1.25rem;font-weight:700;">Weekly Reports</p>
+              <p style="font-size:1rem;" class="text-gray-500">Standard problems · every session</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl p-5" style="border:2.5px solid #1f2937;">
+        <p style="font-size:1.75rem;font-weight:700;" class="text-gray-800 mb-1">🎓 Midterm Exam</p>
+        <p style="font-size:1.2rem;" class="text-gray-400 mb-3">May 7 (Thu) · face-to-face</p>
+        <p style="font-size:1.2rem;font-weight:700;" class="text-gray-700 mb-2">Scope: Sessions 1–6</p>
+        <ul style="font-size:1rem;" class="text-gray-600 space-y-1.5 mb-4">
+          <li>• Kinematics (Ch. 11)</li>
+          <li>• Newton's laws (Ch. 12)</li>
+          <li>• Work, energy, momentum (Ch. 13)</li>
+          <li>• Particle systems (Ch. 14)</li>
+          <li>• Rigid body kinematics (Ch. 15)</li>
+        </ul>
+        <div class="rounded-lg p-3" style="background:#fef9ec;font-size:1rem;">
+          <strong class="text-sub">Cheat sheet allowed:</strong> 1 sheet A4, handwritten, both sides — collected after exam. No textbook, notes, PC, or tablet.
+        </div>
+      </div>
+      <div class="rounded-xl p-5" style="border:2.5px solid #c6a54a;">
+        <p style="font-size:1.75rem;font-weight:700;" class="text-sub mb-1">🎓 Final Exam</p>
+        <p style="font-size:1.2rem;" class="text-gray-400 mb-3">Jun 5 (Thu) · face-to-face</p>
+        <p style="font-size:1.2rem;font-weight:700;" class="text-gray-700 mb-2">Scope: Sessions 1–12</p>
+        <ul style="font-size:1rem;" class="text-gray-600 space-y-1.5 mb-4">
+          <li>• <strong>30–40%</strong> Foundations (Ch. 11–17)</li>
+          <li>• <strong>60–70%</strong> Vibrations + Lagrangian (Ch. 19 + Analytical)</li>
+        </ul>
+        <div class="rounded-lg p-3" style="background:#fef9ec;font-size:1rem;">
+          <strong class="text-sub">Cheat sheet allowed:</strong> 1 sheet A4, handwritten, both sides — collected after exam. No textbook, notes, PC, or tablet.
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar"></div>
+  </div>
+
+  <!-- ========== SLIDE 7: Let's Try It ========== -->
+  <div class="slide" style="background:#1f2937;color:white;">
+    <div class="left-border mb-3" style="border-color:#c6a54a;">
+      <h2 class="slide-title" style="color:white;">Let's Try It Now</h2>
+      <p class="slide-sub" style="color:#9ca3af;">Open Session 1 on your device and follow along</p>
+    </div>
+    <div class="grid grid-cols-2 gap-8">
+      <div>
+        <p style="font-size:1.75rem;font-weight:700;" class="text-sub mb-3">🌐 Open this URL</p>
+        <div class="rounded-lg px-5 py-3 mb-4" style="background:#1a3245;border:1.5px solid #356f8c;font-family:monospace;font-size:1.25rem;color:#7ecbef;">
+          anna-suzuki-tu.github.io/Mechanics2026/lecture01.html
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-start gap-3">
+            <div class="step-circle flex-shrink-0">1</div>
+            <p style="font-size:1.25rem;color:#d1d5db;">Open the URL on laptop</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="step-circle flex-shrink-0" style="background:#c6a54a;">2</div>
+            <p style="font-size:1.25rem;color:#d1d5db;">Read the intro, then click <strong style="color:white;">"Start Gatekeeper →"</strong></p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="step-circle flex-shrink-0">3</div>
+            <p style="font-size:1.25rem;color:#d1d5db;">Answer the 5 concept questions honestly</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="step-circle flex-shrink-0" style="background:#c6a54a;">4</div>
+            <p style="font-size:1.25rem;color:#d1d5db;">Wrong answer → watch supplementary video</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="step-circle flex-shrink-0">5</div>
+            <p style="font-size:1.25rem;color:#d1d5db;">Watch Main Video</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="step-circle flex-shrink-0" style="background:#c6a54a;">6</div>
+            <p style="font-size:1.25rem;color:#d1d5db;">Solve Basic Problems together in Video</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="step-circle flex-shrink-0">7</div>
+            <p style="font-size:1.25rem;color:#d1d5db;">Solve Standard & Advanced (option) Problems by yourself</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="step-circle flex-shrink-0" style="background:#c6a54a;">8</div>
+            <p style="font-size:1.25rem;color:#d1d5db;">Submit your solutions in Google Classroom</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar"></div>
+  </div>
+
+</div><!-- end slide-container -->
+
+<div class="controls">
+  <div class="btn" onclick="prevSlide()">◀ BACK</div>
+  <div id="slideNum" class="btn btn-num">1 / 7</div>
+  <div class="btn" onclick="nextSlide()">NEXT ▶</div>
+</div>
+
+<script>
+let cur = 0;
+const slides = document.querySelectorAll('.slide');
+const numDisp = document.getElementById('slideNum');
+function update() {
+  slides.forEach((s, i) => s.classList.toggle('active', i === cur));
+  numDisp.innerText = `${cur + 1} / ${slides.length}`;
+  const pct = `${((cur + 1) / slides.length) * 100}%`;
+  document.querySelectorAll('.progress-bar').forEach(pb => pb.style.width = pct);
+}
+function nextSlide() { if (cur < slides.length - 1) { cur++; update(); } }
+function prevSlide() { if (cur > 0) { cur--; update(); } }
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+  if (e.key === 'ArrowLeft') prevSlide();
+});
+update();
+</script>
+</body>
+</html>
