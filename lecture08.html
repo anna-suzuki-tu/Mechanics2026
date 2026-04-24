@@ -94,8 +94,9 @@
         </div>
       </section>
 
-      <!-- ④ Main Video + Exercises -->
+      <!-- ④ Main Video + Exercises (same section) -->
       <section id="main-video-section" class="hidden">
+
         <div class="card">
           <div class="card-header">Main Lecture Video</div>
           <div class="card-body">
@@ -105,11 +106,63 @@
               <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
             </div>
             <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
-              <source src="videos/main/lecture8_main.mp4" type="video/mp4" />
+              <source src="videos/main/lecture8_main_video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Moment of Inertia from Definition</div>
+              <div class="ex-body">Derive the moment of inertia of a solid uniform cylinder (mass m, radius R) about its central axis using I = ∫r² dm.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Pulley–Mass System</div>
+              <div class="ex-body">A uniform disk (mass M, radius R, I_G = ½MR²) is mounted on a fixed axle. A cord wrapped on its rim supports hanging mass m. Find the acceleration a of the mass when released from rest.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Standard Problems — Core</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Standard 1</div>
+              <div class="ex-title">Rolling on an Incline</div>
+              <div class="ex-body">A uniform cylinder (mass m, radius R, I_G = ½mR²) rolls without slipping down a rough incline at angle θ. Find the acceleration a_G of the center of mass and the friction force F.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 2</div>
+              <div class="ex-title">Pin-Released Rod</div>
+              <div class="ex-body">A uniform rod (mass m, length L, I_O = ⅓mL²) is pinned at one end and held horizontal, then released from rest. Find the angular acceleration α and the pin reactions immediately after release.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 3</div>
+              <div class="ex-title">Energy Bridge</div>
+              <div class="ex-body">A uniform sphere (m = 5 kg, R = 0.2 m, I_G = ⅖mR²) starts from rest and rolls without slipping 3 m down a 30° incline. Use energy conservation to find v_G. <em>Hint: rolling friction does zero work.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Compound Drum</div>
+              <div class="ex-body">A compound drum (outer radius R, inner radius r, mass M, I_O = ½M(R²+r²)) is on a fixed axle. The outer cord is tied to a wall; the inner cord carries hanging mass m. Find the acceleration of m when released.</div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
     </main>
