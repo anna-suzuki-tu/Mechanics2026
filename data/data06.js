@@ -43,7 +43,7 @@ const questions = [
       "Away from the center (outward radial)",
       "In the direction of the net force"
     ],
-    answer: 2,
+    answer: 1,
     supplementaryTitle: "Supplementary Video 6-3: Velocity in Circular Motion",
     supplementaryText:
       "In circular motion, the velocity vector is always tangent to the circle — perpendicular to the radius at that instant. ",
