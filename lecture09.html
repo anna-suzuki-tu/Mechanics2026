@@ -46,7 +46,7 @@
               </li>
               <li>
                 <strong class="goal-title">Apply angular momentum conservation to rigid body collisions</strong>
-                <span class="goal-detail">Angular momentum H_G is conserved when <mark>ΣM_G = 0</mark>. For eccentric impact (off-center collision), combine: linear momentum conservation + angular momentum conservation + the coefficient of restitution equation.</span>
+                <span class="goal-detail">Angular momentum H_G is conserved when <mark>ΣM_G = 0</mark>. For eccentric impact (off-center collision), combine: linear momentum conservation + angular momentum conservation <mark>about the impact point</mark> + the coefficient of restitution equation.</span>
               </li>
             </ol>
           </div>
@@ -94,8 +94,9 @@
         </div>
       </section>
 
-      <!-- ④ Main Video + Exercises -->
+      <!-- ④ Main Video + Exercises (same section) -->
       <section id="main-video-section" class="hidden">
+
         <div class="card">
           <div class="card-header">Main Lecture Video</div>
           <div class="card-body">
@@ -105,11 +106,63 @@
               <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
             </div>
             <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
-              <source src="videos/main/lecture9_main.mp4" type="video/mp4" />
+              <source src="videos/main/lecture9_main_video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Total Kinetic Energy of Rolling</div>
+              <div class="ex-body">A uniform disk (mass m, radius R, I_G = ½mR²) rolls without slipping with center velocity v_G. Write the total kinetic energy T and simplify using the rolling constraint v_G = R·ω.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Angular Momentum Conservation</div>
+              <div class="ex-body">A flywheel (M = 20 kg, R = 0.5 m, I_G = ½MR²) spins at ω₁ = 10 rad/s. A mass m = 5 kg is gently placed on its rim (no slip). Find the new angular velocity ω₂.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Standard Problems — Core</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Standard 1</div>
+              <div class="ex-title">Rolling Ball up a Ramp</div>
+              <div class="ex-body">A solid sphere (m = 3 kg, R = 0.15 m, I_G = ⅖mR²) rolls at v₀ = 6 m/s on a flat surface and meets a 20° rough incline. Use energy conservation to find the maximum height h it reaches.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 2</div>
+              <div class="ex-title">Eccentric Impact on a Rod</div>
+              <div class="ex-body">A uniform rod (mass M, length L, I_O = ⅓ML²) is pinned at O and at rest. A ball (mass m, velocity v₀) hits the rod at distance d from O and sticks (e = 0). Find ω after impact and the impulse at pin O. <em>Hint: linear momentum is NOT conserved, but angular momentum about O is.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 3</div>
+              <div class="ex-title">Sudden Loading of a Flywheel</div>
+              <div class="ex-body">A flywheel (M = 20 kg, R = 0.5 m, I_G = ½MR²) spins at ω₁ = 10 rad/s. A mass m = 5 kg is gently placed on its rim. Find ω₂ and the kinetic energy lost.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Door Impact — Full Analysis</div>
+              <div class="ex-body">A door (M = 30 kg, L = 1.0 m, I_O = ⅓ML²) is vertical and at rest. A ball (m = 2 kg, v₀ = 30 m/s) hits the free edge and embeds (e = 0). (1) Find ω just after impact. (2) Find the horizontal hinge impulse at O. (3) Determine if the door swings to horizontal using an energy check.</div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
     </main>
