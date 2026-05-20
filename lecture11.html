@@ -94,22 +94,95 @@
         </div>
       </section>
 
-      <!-- ④ Main Video + Exercises -->
+      <!-- ④ Main Video + Exercises (same section) -->
       <section id="main-video-section" class="hidden">
+
         <div class="card">
           <div class="card-header">Main Lecture Video</div>
           <div class="card-body">
             <div class="lecture-instructions">
-              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
+              <p class="inst-step"><span class="inst-num">1</span>Watch the lecture videos below (3 parts).</p>
               <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
               <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
             </div>
-            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
-              <source src="videos/main/lecture11_main.mp4" type="video/mp4" />
+
+            <p style="margin-top:24px; font-weight:600; font-size:0.875rem; color:#356f8c; letter-spacing:0.04em; text-transform:uppercase;">Part 1</p>
+            <video controls preload="metadata" width="100%" style="margin-top:8px;">
+              <source src="videos/main/lecture11-1_main_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <p style="margin-top:28px; font-weight:600; font-size:0.875rem; color:#356f8c; letter-spacing:0.04em; text-transform:uppercase;">Part 2</p>
+            <video controls preload="metadata" width="100%" style="margin-top:8px;">
+              <source src="videos/main/lecture11-2_main_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <p style="margin-top:28px; font-weight:600; font-size:0.875rem; color:#356f8c; letter-spacing:0.04em; text-transform:uppercase;">Part 3</p>
+            <video controls preload="metadata" width="100%" style="margin-top:8px;">
+              <source src="videos/main/lecture11-3_main_video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Degrees of Freedom and Generalized Coordinates</div>
+              <div class="ex-body">For each system below, state the number of degrees of freedom n and the most natural generalized coordinate(s): (1) a single particle sliding freely on a flat horizontal plane, (2) a simple pendulum (mass on rigid rod of length L, pinned at a fixed pivot, moving in a vertical plane), (3) a bead threaded on a straight frictionless wire, (4) a double pendulum (two masses on two rigid rods, pinned at a fixed pivot, moving in a vertical plane).</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Virtual Work Equilibrium: Spring on Inclined Plane</div>
+              <div class="ex-body">A block of mass m rests on a smooth inclined plane of angle β, connected to a fixed wall by a spring of stiffness k (natural length at x = 0 along slope). Find the equilibrium position x_eq using the principle of virtual work. <em>Note: the normal force does no virtual work — it never appears.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 3</div>
+              <div class="ex-title">Virtual Work Equilibrium: Two Masses in a Semicylindrical Trough</div>
+              <div class="ex-body">A smooth semicylindrical trough of radius R holds a light rigid rod of length √2R. Masses 2m and m are attached at each end, resting on the curved surface. Find the equilibrium angle θ (angle of rod with horizontal) using the principle of virtual work. <em>Hint: express heights y₁(θ) and y₂(θ) from the trough geometry, then set the total virtual work to zero.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Core Problems</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Core 1</div>
+              <div class="ex-title">D'Alembert's Principle: Block on a Slope</div>
+              <div class="ex-body">A block of mass m slides without friction down an inclined plane of angle β. Using d'Alembert's principle with generalized coordinate x (displacement along slope), derive the equation of motion and find the acceleration. Compare with the Newtonian approach — how many equations does each method require?</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Core 2</div>
+              <div class="ex-title">Virtual Work Equilibrium: Two-Mass Pulley System</div>
+              <div class="ex-body">Two masses m₁ and m₂ (m₁ > m₂) are connected by a light inextensible string over a frictionless massless pulley. Using the principle of virtual work with a single generalized coordinate, find the condition for equilibrium. Then apply d'Alembert's principle to derive the Atwood machine acceleration a = (m₁ − m₂)g / (m₁ + m₂). <em>Note: the string tension never appears.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Core 3</div>
+              <div class="ex-title">Generalized Force: Pendulum with Applied Torque</div>
+              <div class="ex-body">A simple pendulum (mass m, length L, angle θ from vertical) has an external torque τ applied at the pivot (positive in direction of increasing θ). Find the generalized force Q_θ and write the equation of motion. <em>Hint: Q_i = Σ F_applied · (∂r/∂q_i); the virtual work of torque τ through virtual rotation δθ is τ·δθ.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Two-DOF System: Mass on a Rotating Arm</div>
+              <div class="ex-body">A light rigid arm of length L is pinned at the origin and rotates freely in a horizontal plane. At its tip, mass m can slide along the arm (frictionless). Let θ = arm angle, r = distance of mass from pivot. (1) State the DOF and generalized coordinates. (2) Write the mass position in Cartesian coordinates as a function of (r, θ). (3) Compute generalized forces Q_r and Q_θ (gravity does no work; no other applied forces). (4) What does Q_r = 0 and Q_θ = 0 tell you physically about conservation laws?</div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
     </main>

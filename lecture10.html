@@ -37,7 +37,7 @@
           <div class="card-body">
             <ol class="goals-list">
               <li>
-                <strong class="goal-title">Derive the equation of motion and find the natural frequency</strong>
+                <strong class="goal-title">Derive the equation of motion for an undamped spring-mass system and find its natural frequency</strong>
                 <span class="goal-detail">Apply Newton's second law to get <mark>mẍ + kx = 0</mark>. The natural frequency is <mark>ω_n = √(k/m)</mark> rad/s. This depends only on system properties — not on initial conditions or how hard the system is excited.</span>
               </li>
               <li>
@@ -94,8 +94,9 @@
         </div>
       </section>
 
-      <!-- ④ Main Video + Exercises -->
+      <!-- ④ Main Video + Exercises (same section) -->
       <section id="main-video-section" class="hidden">
+
         <div class="card">
           <div class="card-header">Main Lecture Video</div>
           <div class="card-body">
@@ -105,11 +106,63 @@
               <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
             </div>
             <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
-              <source src="videos/main/lecture10_main.mp4" type="video/mp4" />
+              <source src="videos/main/lecture10_main_video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Natural Frequency</div>
+              <div class="ex-body">A spring-mass system has m = 2 kg and k = 200 N/m. Find: (1) the natural angular frequency ω_n (rad/s), (2) the natural frequency f_n (Hz), and (3) the period T_n (s).</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Simple Pendulum</div>
+              <div class="ex-body">Derive ω_n for a simple pendulum of length L = 0.5 m using the small-angle approximation. Show that the result equals √(g/L) and explain why the pendulum shares the same equation structure as a spring-mass system.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Standard Problems — Core</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Standard 1</div>
+              <div class="ex-title">Initial Value Problem</div>
+              <div class="ex-body">For m = 1 kg, k = 100 N/m, with initial conditions x(0) = 0.05 m and ẋ(0) = 0.3 m/s: (1) find ω_n, (2) find C₁ and C₂ in x(t) = C₁cos(ω_n t) + C₂sin(ω_n t), (3) compute the amplitude A = √(C₁² + C₂²).</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 2</div>
+              <div class="ex-title">Energy Conservation Check</div>
+              <div class="ex-body">Using the result from Standard 1 (A ≈ 0.0583 m, ω_n = 10 rad/s): (1) compute V_max = ½kA², (2) compute v_max = A·ω_n and KE_max = ½mv_max², (3) verify numerically that V_max = KE_max.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Standard 3</div>
+              <div class="ex-title">Vertical Spring</div>
+              <div class="ex-body">A mass m = 5 kg hangs from a vertical spring (k = 500 N/m). (1) Find the static deflection δ_st. (2) Write the equation of motion in y (displacement from equilibrium) and find ω_n. (3) Show that ω_n = √(g/δ_st).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Pinned Rod Oscillation</div>
+              <div class="ex-body">A uniform rod (mass m, length L, I_O = ⅓mL²) is pinned at one end and oscillates in a vertical plane. (1) Derive ω_n using the restoring torque. (2) Find the equivalent pendulum length L_eq that gives the same ω_n.</div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
     </main>

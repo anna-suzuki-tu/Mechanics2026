@@ -94,22 +94,94 @@
         </div>
       </section>
 
-      <!-- ④ Main Video + Exercises -->
+      <!-- ④ Main Video + Exercises (same section) -->
       <section id="main-video-section" class="hidden">
+
         <div class="card">
           <div class="card-header">Main Lecture Video</div>
           <div class="card-body">
             <div class="lecture-instructions">
               <p class="inst-step"><span class="inst-num">1</span>Watch the lecture video below.</p>
               <p class="inst-step"><span class="inst-num">2</span>Work through all the problems below. Basic problems are solved in the video — try them yourself first before checking.</p>
-              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Standard Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
+              <p class="inst-step"><span class="inst-num">3</span>Submit a report on Google Classroom covering the Core Problems (required) and, optionally, the Advanced Problem. For each problem, write your solution, explain why you chose your method, and note any alternative approaches.</p>
             </div>
-            <video id="main-video" controls preload="metadata" width="100%" style="margin-top:20px;">
-              <source src="videos/main/lecture12_main.mp4" type="video/mp4" />
+            <p style="margin-top:24px; font-weight:600; font-size:0.875rem; color:#356f8c; letter-spacing:0.04em; text-transform:uppercase;">Part 1</p>
+            <video controls preload="metadata" width="100%" style="margin-top:8px;">
+              <source src="videos/main/lecture12-1_main_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <p style="margin-top:28px; font-weight:600; font-size:0.875rem; color:#356f8c; letter-spacing:0.04em; text-transform:uppercase;">Part 2</p>
+            <video controls preload="metadata" width="100%" style="margin-top:8px;">
+              <source src="videos/main/lecture12-2_main_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <p style="margin-top:28px; font-weight:600; font-size:0.875rem; color:#356f8c; letter-spacing:0.04em; text-transform:uppercase;">Part 3</p>
+            <video controls preload="metadata" width="100%" style="margin-top:8px;">
+              <source src="videos/main/lecture12-3_main_video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
+
+        <div class="card">
+          <div class="card-header ex-basic">🟢 Basic Problems — Explained in Main Video</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Basic 1</div>
+              <div class="ex-title">Simple Pendulum</div>
+              <div class="ex-body">A simple pendulum has bob mass m and rod length l. The generalized coordinate is θ (angle from vertical). The Lagrangian is L = ½ml²θ̇² + mgl cosθ. Apply the Euler-Lagrange equation and derive the equation of motion. <em>Note: rod tension never appears in this method.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 2</div>
+              <div class="ex-title">Coupled Oscillators</div>
+              <div class="ex-body">Two masses m₁ and m₂ are connected in series by springs k₁ (wall to m₁) and k₂ (m₁ to m₂). Generalized coordinates: x₁ and x₂ (displacements from equilibrium). T = ½m₁ẋ₁² + ½m₂ẋ₂², V = ½k₁x₁² + ½k₂(x₂ − x₁)². Apply the Euler-Lagrange equation to each coordinate and derive the two equations of motion. <em>Note: the cross term in V automatically generates the coupling terms with correct signs.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Basic 3</div>
+              <div class="ex-title">Rolling Cylinder on an Inclined Plane</div>
+              <div class="ex-body">A uniform cylinder (mass m, radius r, I_G = ½mr²) rolls without slipping down a slope of angle φ. Use s (displacement of the center along the slope) as the generalized coordinate. The rolling constraint ṡ = rθ̇ is absorbed into s, so θ̇ = ṡ/r. Write L = ¾mṡ² + mgs sinφ, apply the Euler-Lagrange equation, and find the acceleration a_G. <em>Note: friction force never appears — it does no virtual work once the rolling constraint is absorbed into s.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-standard">🟡 Core Problems</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Core 1</div>
+              <div class="ex-title">Euler-Lagrange Procedure: Spring-Mass System</div>
+              <div class="ex-body">For a spring-mass system, the Lagrangian is L = ½mẋ² − ½kx². Apply the Euler-Lagrange equation step by step: compute ∂L/∂ẋ, differentiate with respect to time, subtract ∂L/∂x. Derive the equation of motion and verify that the result matches Newton's second law F = ma.</div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Core 2</div>
+              <div class="ex-title">Cart with Pendulum</div>
+              <div class="ex-body">A cart of mass M is connected to a fixed wall by a spring of stiffness k and can slide horizontally. A pendulum (mass m, length l) hangs from the cart. Use x (cart displacement) and θ (pendulum angle) as generalized coordinates. For small θ, the Lagrangian is approximately L ≈ ½(M+m)ẋ² + mlẋθ̇ + ½ml²θ̇² − ½kx² + mgl(1 − θ²/2). (1) Derive the equation of motion for x. (2) Derive the equation of motion for θ. <em>Note: the coupling term mlẋθ̇ in T automatically produces cross-coupling in both equations.</em></div>
+            </div>
+            <div class="ex-divider"></div>
+            <div class="ex-item">
+              <div class="ex-label">Core 3</div>
+              <div class="ex-title">Cyclic Coordinate and Conservation Law</div>
+              <div class="ex-body">A particle of mass m moves under a central force V = V(r) in a plane. In polar coordinates (r, θ), the Lagrangian is L = ½m(ṙ² + r²θ̇²) − V(r). (1) Identify which coordinate is cyclic and explain why. (2) State the conservation law that follows, and identify the conserved quantity physically. (3) Write the Euler-Lagrange equation for r (the non-cyclic coordinate). <em>Hint: a coordinate q is cyclic if ∂L/∂q = 0.</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header ex-advanced">🔴 Advanced Problem — Optional</div>
+          <div class="card-body">
+            <div class="ex-item">
+              <div class="ex-label">Advanced 1</div>
+              <div class="ex-title">Double Pendulum</div>
+              <div class="ex-body">A double pendulum has rod lengths L₁, L₂ and masses m₁ (at end of rod 1) and m₂ (at end of rod 2), with angles θ₁ and θ₂ measured from the vertical. (1) Write T and V exactly in terms of θ₁, θ₂, θ̇₁, θ̇₂. (2) For small amplitudes (sinθ ≈ θ, cosθ ≈ 1), derive the two linearized equations of motion via the Euler-Lagrange equation. (3) Describe what Newton's method would require to obtain the same result — how many free-body diagrams, force equations, and unknowns are needed?</div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
     </main>
