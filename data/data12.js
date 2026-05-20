@@ -46,18 +46,18 @@ const questions = [
     answer: 1,
     supplementaryTitle: "Supplementary Video 12-3: Symmetry and Conservation of Angular Momentum",
     supplementaryText:
-      "The torque of a force about a point equals r × F. For a central force (F directed toward the Sun), F is parallel to r, so r × F = 0. With zero net torque, angular momentum H = r × mv is conserved: dH/dt = ΣM = 0. This is why planets sweep equal areas in equal times (Kepler's second law). Kinetic energy is not conserved — it exchanges with potential energy as the planet speeds up near the Sun and slows down far away. In Lecture 12, this connection between symmetry (the force has no angular dependence) and conservation law (angular momentum) emerges automatically from the mathematics, without needing to compute torques explicitly. Watch this short video, then continue.",
+      "The torque of a force about a point equals r × F. For a central force (F directed toward the Sun), F is collinear with r — specifically anti-parallel to it, since r points away from the Sun while F points toward it. Because F and r are collinear, r × F = 0. With zero net torque, angular momentum H = r × mv is conserved: dH/dt = ΣM = 0. This is why planets sweep equal areas in equal times (Kepler's second law). Kinetic energy is not conserved — it exchanges with potential energy as the planet speeds up near the Sun and slows down far away. In Lecture 12, this connection between symmetry (the force has no angular dependence) and conservation law (angular momentum) emerges automatically from the mathematics, without needing to compute torques explicitly. Watch this short video, then continue.",
     supplementaryVideo: "videos/supplementary/supplementary_video_12-3.mp4"
   },
   {
     id: "12-4",
     title: "Question 4",
-    text: "Light travels from point A to point B through two different media (like air and glass). Fermat's principle states that light takes the path that minimizes travel time — which is why light bends at the interface (refraction). Which of the following is a different optimization problem?",
+    text: "Fermat's principle states that light takes the path that minimizes travel time between two points — which is why light bends at a glass-air interface. Which of the following is the closest mechanical analogue of Fermat's principle: an optimization problem that also minimizes travel time, but for a particle moving under a physical force rather than for light?",
     choices: [
       "Finding the path of minimum distance between two points in a plane (a straight line)",
       "Finding the path of minimum distance between two points on a sphere (a great circle)",
       "Finding the path along which a bead slides from A to B in the shortest time under gravity (the brachistochrone problem)",
-      "All of the above are the same problem as Fermat's principle"
+      "All of the above are equivalent to Fermat's principle"
     ],
     answer: 2,
     supplementaryTitle: "Supplementary Video 12-4: Calculus of Variations and Hamilton's Principle",

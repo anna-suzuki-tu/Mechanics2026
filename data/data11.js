@@ -62,7 +62,7 @@ const questions = [
     answer: 1,
     supplementaryTitle: "Supplementary Video 11-4: Virtual Work and Constraint Forces",
     supplementaryText:
-      "When a force is perpendicular to the velocity at every instant — like a normal force from a smooth surface — it does no work: W = F·v = 0. Because it does no work, it does not appear in the energy equation. Lecture 11 generalizes this: constraint forces do no work along any displacement consistent with the constraint, so they disappear from the equations automatically. Watch this short video, then continue.",
+      "When a force is perpendicular to the velocity at every instant — like a normal force from a smooth surface — it delivers zero instantaneous power: P = F·v = 0. Because the power is zero at every instant, no work is done: W = ∫P dt = 0. Because it does no work, it does not appear in the energy equation. Lecture 11 generalizes this: constraint forces do no work along any displacement consistent with the constraint, so they disappear from the equations automatically. Watch this short video, then continue.",
     supplementaryVideo: "videos/supplementary/supplementary_video_11-4.mp4"
   },
   {

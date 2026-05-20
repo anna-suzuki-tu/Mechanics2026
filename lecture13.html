@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanics 2026 — Lecture 13: Analytical Mechanics — Method Comparison &amp; Practice</title>
+  <link rel="stylesheet" href="style_v2.css" />
+  <style>
+    /* ── Method comparison table ── */
+    .method-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 14px;
+    }
+    .method-table th {
+      background: var(--accent1);
+      color: white;
+      padding: 9px 10px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+    }
+    .method-table th:first-child { text-align: left; }
+    .method-table td {
+      padding: 7px 10px;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .method-table td:first-child { text-align: left; font-weight: 500; }
+    .method-table tbody tr:nth-child(even) td { background: #f5f9fc; }
+    .method-legend {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    /* ── Answer reveal area ── */
+    .answer-reveal {
+      background: #f0f7ff;
+      border-left: 4px solid var(--accent1);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-top: 20px;
+    }
+    .answer-reveal-label {
+      font-weight: 800;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent1);
+      margin-bottom: 10px;
+    }
+    .answer-reveal p  { margin: 8px 0; line-height: 1.7; font-size: 0.9rem; }
+    .answer-reveal ul { margin: 6px 0; padding-left: 20px; }
+    .answer-reveal li { margin-bottom: 5px; line-height: 1.7; font-size: 0.9rem; }
+
+    /* ── Problem text ── */
+    #problem-text p,
+    #problem-text ol,
+    #problem-text ul { margin: 8px 0; line-height: 1.7; font-size: 0.95rem; }
+    #problem-text ol,
+    #problem-text ul { padding-left: 22px; }
+    #problem-text li  { margin-bottom: 5px; }
+    #problem-text em  { color: var(--accent1); font-style: normal; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-content">
+        <p class="lecture-label">Lecture 13: Analytical Mechanics III | Method Comparison &amp; Practice</p>
+        <h1 id="hero-title">Introduction</h1>
+        <p id="hero-text" class="hero-text">
+          This session has no lecture video. Review the method comparison guide, then work through each problem in quiz mode — attempt it on paper first, then reveal the answer to check your reasoning.
+          When you're ready, click <strong>Start Practice</strong>.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ① Intro -->
+      <section id="intro-section">
+
+        <div class="card">
+          <div class="card-header">← Previous Lecture</div>
+          <div class="card-body">
+            <div class="block-title">Lecture 12 — Analytical Mechanics II: Lagrange Equations</div>
+            <p class="block-body">You derived and applied the Euler-Lagrange equation, identified cyclic coordinates and their conservation laws, and applied the Lagrangian method to multi-DOF systems including the cart-pendulum and rolling cylinder. You saw how constraint forces disappear automatically and how n degrees of freedom yield n independent equations of motion.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Session Overview</div>
+          <div class="card-body">
+            <p class="block-body">This consolidation session covers Lectures 11 and 12. For each problem you will: (1) identify the most appropriate solution method and explain why, (2) apply the Euler-Lagrange method to derive the equation of motion, and (3) compare with Newton's method and articulate what disappeared.</p>
+            <div class="block-title" style="margin-top: 20px;">Method Selection Guide</div>
+            <table class="method-table">
+              <thead>
+                <tr>
+                  <th>Problem</th>
+                  <th>Newton</th>
+                  <th>Energy</th>
+                  <th>D'Alembert</th>
+                  <th>Lagrange</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Simple pendulum</td><td>◎</td><td>◎</td><td>◎</td><td>◎</td></tr>
+                <tr><td>Inclined plane</td><td>◎</td><td>◎</td><td>○</td><td>◎</td></tr>
+                <tr><td>Mass-spring</td><td>◎</td><td>◎</td><td>○</td><td>◎</td></tr>
+                <tr><td>Spring pendulum</td><td>△</td><td>△</td><td>○</td><td>◎</td></tr>
+                <tr><td>Cart + pendulum</td><td>△</td><td>△</td><td>○</td><td>◎</td></tr>
+                <tr><td>Vertical cylinder</td><td>◎</td><td>◎</td><td>◎</td><td>◎</td></tr>
+                <tr><td>Double pendulum</td><td>△</td><td>△</td><td>○</td><td>◎</td></tr>
+                <tr><td>Rolling sphere</td><td>○</td><td>○</td><td>◎</td><td>◎</td></tr>
+              </tbody>
+            </table>
+            <p class="method-legend">◎ Highly recommended &nbsp;|&nbsp; ○ Recommended &nbsp;|&nbsp; △ Less recommended (correct but complex)</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">How This Session Works</div>
+          <div class="card-body">
+            <ol class="goals-list">
+              <li>
+                <strong class="goal-title">Attempt each problem on paper before revealing the answer</strong>
+                <span class="goal-detail">Work through the problem yourself first. Click <mark>Show Answer</mark> only after attempting. The learning happens in the attempt — not in reading the solution passively.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Compare your reasoning, not just your final answer</strong>
+                <span class="goal-detail">After revealing the answer, check whether your steps and reasoning match. Pay attention to which forces disappeared and at what point — this is the key insight of analytical mechanics.</span>
+              </li>
+              <li>
+                <strong class="goal-title">Use this session to prepare for the final exam</strong>
+                <span class="goal-detail">No report is required. Work through as many problems as you can at your own pace. Focus on being able to explain why a particular method works — and what disappears — rather than just reproducing the answer.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="intro-button-row">
+          <button id="start-btn" class="btn primary">Start Practice →</button>
+        </div>
+
+      </section>
+
+      <!-- ② Exercise Quiz -->
+      <section id="exercise-section" class="hidden">
+        <div class="card">
+          <div class="progress-wrap">
+            <span id="progress-text">Problem 1 / 8</span>
+          </div>
+          <div id="exercise-header" class="card-header ex-basic"></div>
+          <div class="card-body">
+            <div id="problem-text"></div>
+            <div style="display:flex; gap:12px; margin-top:22px;">
+              <button id="show-answer-btn" class="btn primary">Show Answer ↓</button>
+              <button id="next-btn" class="btn secondary hidden">Next →</button>
+            </div>
+            <div id="answer-area" class="hidden">
+              <div class="answer-reveal">
+                <div class="answer-reveal-label">Answer</div>
+                <div id="answer-content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ③ Completion -->
+      <section id="complete-section" class="hidden">
+        <div class="card">
+          <div class="card-header" style="background:#3a7a42;">Practice Complete ✓</div>
+          <div class="card-body">
+            <p style="font-size:1rem; line-height:1.75; margin:0;">
+              You have worked through all 8 problems in Lecture 13. No report is required — this session is for your own exam preparation. Review any problems you found difficult, and make sure you can explain <em>why</em> each method works and what disappears at each step. Good luck on the final exam.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="data/data13.js"></script>
+  <script>
+    let currentIndex = 0;
+
+    const categoryHeaderClass = {
+      basic:    'card-header ex-basic',
+      core:     'card-header ex-standard',
+      advanced: 'card-header ex-advanced'
+    };
+
+    function renderExercise() {
+      const ex = exercises[currentIndex];
+
+      // Progress indicator
+      document.getElementById('progress-text').textContent =
+        'Problem ' + (currentIndex + 1) + ' / ' + exercises.length;
+
+      // Dynamic category header
+      const headerEl = document.getElementById('exercise-header');
+      headerEl.className = categoryHeaderClass[ex.category];
+      headerEl.textContent = ex.label + ' — ' + ex.title;
+
+      // Problem text
+      document.getElementById('problem-text').innerHTML = ex.text;
+
+      // Reset answer state
+      document.getElementById('answer-content').innerHTML = ex.answer;
+      document.getElementById('answer-area').classList.add('hidden');
+      document.getElementById('show-answer-btn').classList.remove('hidden');
+
+      // Next button label and visibility
+      const nextBtn = document.getElementById('next-btn');
+      nextBtn.textContent = (currentIndex + 1 < exercises.length) ? 'Next →' : 'Finish ✓';
+      nextBtn.classList.add('hidden');
+
+      // Scroll to top of page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.getElementById('start-btn').addEventListener('click', function () {
+      document.getElementById('intro-section').classList.add('hidden');
+      document.getElementById('exercise-section').classList.remove('hidden');
+      renderExercise();
+    });
+
+    document.getElementById('show-answer-btn').addEventListener('click', function () {
+      document.getElementById('answer-area').classList.remove('hidden');
+      document.getElementById('show-answer-btn').classList.add('hidden');
+      document.getElementById('next-btn').classList.remove('hidden');
+    });
+
+    document.getElementById('next-btn').addEventListener('click', function () {
+      currentIndex++;
+      if (currentIndex >= exercises.length) {
+        document.getElementById('exercise-section').classList.add('hidden');
+        document.getElementById('complete-section').classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        renderExercise();
+      }
+    });
+  </script>
+</body>
+</html>
